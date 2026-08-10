@@ -7,7 +7,17 @@
     <nav class="main-nav" aria-label="{{ s.nav.home }}">
       <ul class="main-nav__list">
         <li><a href="{{ '/about/' | localize(lang) | url }}" {% if navKey == 'about' %}aria-current="page"{% endif %}>{{ s.nav.about }}</a></li>
-        <li><a href="{{ '/practice-areas/' | localize(lang) | url }}" {% if navKey == 'practiceAreas' %}aria-current="page"{% endif %}>{{ s.nav.practiceAreas }}</a></li>
+        <li class="has-dropdown">
+          <a href="{{ '/practice-areas/' | localize(lang) | url }}" {% if navKey == 'practiceAreas' %}aria-current="page"{% endif %}>{{ s.nav.practiceAreas }}</a>
+          <button type="button" class="dropdown-caret" data-dropdown-toggle aria-expanded="false" aria-controls="practice-areas-menu" aria-haspopup="true" aria-label="{{ s.nav.practiceAreas }}">
+            <span aria-hidden="true">&#9662;</span>
+          </button>
+          <ul class="dropdown-menu" id="practice-areas-menu" data-dropdown-menu>
+            {% for area in practiceAreas %}
+            <li><a href="{{ ('/practice-areas/' ~ area.slug ~ '/') | localize(lang) | url }}">{{ area.title_he if lang == 'he' else area.title_en }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
         <li><a href="{{ '/cases/' | localize(lang) | url }}" {% if navKey == 'cases' %}aria-current="page"{% endif %}>{{ s.nav.cases }}</a></li>
         <li><a href="{{ '/clients/' | localize(lang) | url }}" {% if navKey == 'clients' %}aria-current="page"{% endif %}>{{ s.nav.clients }}</a></li>
         <li><a href="{{ '/articles/' | localize(lang) | url }}" {% if navKey == 'articles' %}aria-current="page"{% endif %}>{{ s.nav.articles }}</a></li>
@@ -38,7 +48,19 @@
   </div>
   <ul class="mobile-nav__list">
     <li><a href="{{ '/about/' | localize(lang) | url }}">{{ s.nav.about }}</a></li>
-    <li><a href="{{ '/practice-areas/' | localize(lang) | url }}">{{ s.nav.practiceAreas }}</a></li>
+    <li class="has-dropdown">
+      <div class="mobile-nav__item-row">
+        <a href="{{ '/practice-areas/' | localize(lang) | url }}">{{ s.nav.practiceAreas }}</a>
+        <button type="button" class="dropdown-caret" data-dropdown-toggle aria-expanded="false" aria-controls="mobile-practice-areas-menu" aria-haspopup="true" aria-label="{{ s.nav.practiceAreas }}">
+          <span aria-hidden="true">&#9662;</span>
+        </button>
+      </div>
+      <ul class="mobile-submenu" id="mobile-practice-areas-menu" data-dropdown-menu>
+        {% for area in practiceAreas %}
+        <li><a href="{{ ('/practice-areas/' ~ area.slug ~ '/') | localize(lang) | url }}">{{ area.title_he if lang == 'he' else area.title_en }}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
     <li><a href="{{ '/cases/' | localize(lang) | url }}">{{ s.nav.cases }}</a></li>
     <li><a href="{{ '/clients/' | localize(lang) | url }}">{{ s.nav.clients }}</a></li>
     <li><a href="{{ '/articles/' | localize(lang) | url }}">{{ s.nav.articles }}</a></li>

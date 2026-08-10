@@ -35,6 +35,34 @@
     });
   }
 
+  /* Practice-areas dropdown (desktop hover/focus already handled by CSS;
+     this adds click support for touch/keyboard, plus outside-click and
+     Escape to close) */
+  function closeAllDropdowns() {
+    document.querySelectorAll(".has-dropdown.is-open").forEach(function (li) {
+      li.classList.remove("is-open");
+      var toggle = li.querySelector("[data-dropdown-toggle]");
+      if (toggle) toggle.setAttribute("aria-expanded", "false");
+    });
+  }
+  document.querySelectorAll("[data-dropdown-toggle]").forEach(function (btn) {
+    var parentLi = btn.closest(".has-dropdown");
+    if (!parentLi) return;
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var willOpen = !parentLi.classList.contains("is-open");
+      closeAllDropdowns();
+      if (willOpen) {
+        parentLi.classList.add("is-open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+  document.addEventListener("click", closeAllDropdowns);
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeAllDropdowns();
+  });
+
   /* Case category filters */
   var filterBar = document.querySelector("[data-case-filters]");
   var caseGrid = document.querySelector("[data-case-grid]");

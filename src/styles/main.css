@@ -236,7 +236,7 @@ textarea:focus-visible,
 }
 
 .main-nav { display: flex; align-items: center; gap: var(--space-4); }
-.main-nav__list { list-style: none; display: flex; gap: var(--space-3); margin: 0; padding: 0; }
+.main-nav__list { list-style: none; display: flex; align-items: center; gap: var(--space-3); margin: 0; padding: 0; }
 .main-nav__list a {
   font-size: 0.95rem;
   padding-block: 0.3em;

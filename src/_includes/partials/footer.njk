@@ -20,7 +20,9 @@
       <h3 style="font-size:1rem">{{ s.nav.contact }}</h3>
       <ul class="site-footer__list">
         <li>{{ site.address_he if lang == 'he' else site.address_en }}</li>
-        <li><a href="tel:{{ site.phone }}">{{ site.phone }}</a></li>
+        <li>{{ s.contactLabels.phone }}: <a href="tel:{{ site.phoneHref }}"><bdi dir="ltr">{{ site.phone }}</bdi></a></li>
+        <li>{{ s.contactLabels.mobile }}: <a href="tel:{{ site.mobileHref }}"><bdi dir="ltr">{{ site.mobile }}</bdi></a></li>
+        <li>{{ s.contactLabels.fax }}: <bdi dir="ltr">{{ site.fax }}</bdi></li>
         <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
       </ul>
     </div>

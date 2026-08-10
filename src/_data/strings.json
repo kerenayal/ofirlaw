@@ -61,6 +61,11 @@
       "submit": "שליחת פנייה",
       "required": "שדה חובה"
     },
+    "contactLabels": {
+      "phone": "טלפון",
+      "mobile": "נייד",
+      "fax": "פקס"
+    },
     "whatsappLabel": "צור קשר בוואטסאפ"
   },
   "en": {
@@ -124,6 +129,11 @@
       "message": "Message",
       "submit": "Send Inquiry",
       "required": "Required field"
+    },
+    "contactLabels": {
+      "phone": "Phone",
+      "mobile": "Mobile",
+      "fax": "Fax"
     },
     "whatsappLabel": "Contact via WhatsApp"
   }

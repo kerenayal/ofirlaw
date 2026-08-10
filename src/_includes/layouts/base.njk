@@ -46,10 +46,12 @@
     "name": "{{ site.lawyerName_en }}",
     "url": "{{ site.url }}",
     "image": "{{ site.url }}{{ site.portraitLarge | url }}",
-    "telephone": "{{ site.phone }}",
+    "telephone": "{{ site.phoneHref }}",
+    "faxNumber": "{{ site.fax }}",
     "email": "{{ site.email }}",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Jabotinsky St. 7, Moshe Aviv Tower, Floor 34",
       "addressLocality": "Ramat Gan",
       "addressCountry": "IL"
     },

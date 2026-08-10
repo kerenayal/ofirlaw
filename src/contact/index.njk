@@ -49,7 +49,9 @@ description: "סוגיה משפטית מורכבת דורשת בראש וברא�
     <div class="prose">
       <h2>{{ site.lawyerName_he }}</h2>
       <p>{{ site.address_he }}</p>
-      <p><a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
+      <p>{{ strings.he.contactLabels.phone }}: <a href="tel:{{ site.phoneHref }}"><bdi dir="ltr">{{ site.phone }}</bdi></a></p>
+      <p>{{ strings.he.contactLabels.mobile }}: <a href="tel:{{ site.mobileHref }}"><bdi dir="ltr">{{ site.mobile }}</bdi></a></p>
+      <p>{{ strings.he.contactLabels.fax }}: <bdi dir="ltr">{{ site.fax }}</bdi></p>
       <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
     </div>
   </div>

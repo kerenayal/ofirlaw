@@ -1,0 +1,21 @@
+{
+  "lawyerName_he": "עו\"ד אופיר עומר",
+  "lawyerName_en": "Ofir Omer, Adv.",
+  "url": "https://example-domain-placeholder.co.il",
+  "phone": "[להשלמה]",
+  "email": "[להשלמה]",
+  "whatsapp": "",
+  "address_he": "רמת גן, ישראל",
+  "address_en": "Ramat Gan, Israel",
+  "ogImage": "/assets/images/og-image-placeholder.svg",
+  "portraitLarge": "/assets/images/portrait-placeholder-large.svg",
+  "portraitSmall": "/assets/images/portrait-placeholder-small.svg",
+  "accessibility": {
+    "coordinatorName": "[להשלמה]",
+    "coordinatorEmail": "[להשלמה]",
+    "coordinatorPhone": "[להשלמה]",
+    "statementDate": "[להשלמה]",
+    "conformanceLevel_he": "עמידה חלקית/מלאה בתקן הישראלי ת\"י 5568 (WCAG 2.0 AA) — [להשלמה]",
+    "conformanceLevel_en": "Partial/full conformance with Israeli Standard 5568 (WCAG 2.0 AA) — [להשלמה]"
+  }
+}

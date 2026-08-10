@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+lang: he
+navKey: contact
+altHref: /en/contact/
+title: "צור קשר | עו\"ד אופיר עומר"
+description: "סוגיה משפטית מורכבת דורשת בראש ובראשונה הבנה מדויקת של התמונה. השאירו פרטים וניצור קשר לבחינת האפשרויות העומדות בפניכם."
+---
+<section class="page-header container">
+  <span class="eyebrow">צור קשר</span>
+  <h1>בואו נדבר</h1>
+  <p class="prose">סוגיה משפטית מורכבת דורשת בראש ובראשונה הבנה מדויקת של התמונה. השאירו פרטים וניצור קשר לבחינת האפשרויות העומדות בפניכם.</p>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <form
+      data-contact-form
+      data-mailto="{{ site.email }}"
+      data-label-name="{{ strings.he.form.fullName }}"
+      data-label-phone="{{ strings.he.form.phone }}"
+      data-label-email="{{ strings.he.form.email }}"
+    >
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">{{ strings.he.form.fullName }}</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">{{ strings.he.form.phone }}</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="field full">
+          <label for="email">{{ strings.he.form.email }}</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field full">
+          <label for="subject">{{ strings.he.form.subject }}</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+        <div class="field full">
+          <label for="message">{{ strings.he.form.message }}</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn--primary" style="margin-top: 1.5rem;">{{ strings.he.form.submit }}</button>
+    </form>
+
+    <div class="prose">
+      <h2>{{ site.lawyerName_he }}</h2>
+      <p>{{ site.address_he }}</p>
+      <p><a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    </div>
+  </div>
+</section>

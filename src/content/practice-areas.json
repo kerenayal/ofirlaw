@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "civil-commercial-litigation",
+    "order": 1,
+    "title_he": "ליטיגציה אזרחית ומסחרית",
+    "title_en": "Civil & Commercial Litigation",
+    "short_he": "ייצוג בהליכים משפטיים, סכסוכים עסקיים, מחלוקות חוזיות ותביעות מורכבות.",
+    "short_en": "Representation in legal proceedings, business disputes, contractual conflicts, and complex claims.",
+    "body_he": "ייצוג בהליכים משפטיים, סכסוכים עסקיים, מחלוקות חוזיות ותביעות מורכבות.",
+    "body_en": "Representation in legal proceedings, business disputes, contractual conflicts, and complex claims."
+  },
+  {
+    "slug": "real-estate-property-management",
+    "order": 2,
+    "title_he": "מקרקעין וניהול נכסים",
+    "title_en": "Real Estate & Property Management",
+    "short_he": "ליווי משפטי לבעלי נכסים, חברות ניהול, שוכרים ומשכירים.",
+    "short_en": "Legal support for property owners, management companies, tenants, and landlords.",
+    "body_he": "ליווי משפטי לבעלי נכסים, חברות ניהול, שוכרים ומשכירים, לרבות מחלוקות הנוגעות לנכסים מניבים, דמי ניהול, חוזי שכירות וניהול נכסים.",
+    "body_en": "Legal support for property owners, management companies, tenants, and landlords, including disputes concerning income-producing properties, management fees, lease agreements, and property management."
+  },
+  {
+    "slug": "companies-and-business",
+    "order": 3,
+    "title_he": "חברות ועסקים",
+    "title_en": "Companies & Business",
+    "short_he": "ייעוץ משפטי שוטף לחברות ובעלי עסקים, ניסוח הסכמים וליווי עסקאות.",
+    "short_en": "Ongoing legal counsel for companies and business owners, agreement drafting, and deal support.",
+    "body_he": "ייעוץ משפטי שוטף לחברות ובעלי עסקים, ניסוח הסכמים, ניהול סיכונים וליווי עסקאות.",
+    "body_en": "Ongoing legal counsel for companies and business owners, drafting of agreements, risk management, and transaction support."
+  },
+  {
+    "slug": "commercial-contracts",
+    "order": 4,
+    "title_he": "חוזים והסכמים מסחריים",
+    "title_en": "Commercial Contracts & Agreements",
+    "short_he": "ניסוח, בדיקה וניהול משא ומתן בנוגע להסכמים מסחריים.",
+    "short_en": "Drafting, review, and negotiation of commercial agreements.",
+    "body_he": "ניסוח, בדיקה וניהול משא ומתן בנוגע להסכמים מסחריים.",
+    "body_en": "Drafting, review, and negotiation of commercial agreements."
+  },
+  {
+    "slug": "landlord-tenant-disputes",
+    "order": 5,
+    "title_he": "סכסוכים בין בעלי נכסים ושוכרים",
+    "title_en": "Landlord-Tenant Disputes",
+    "short_he": "ייצוג וייעוץ במחלוקות הנוגעות לזכויות וחובות הצדדים.",
+    "short_en": "Representation and counsel in disputes over the rights and obligations of the parties.",
+    "body_he": "ייצוג וייעוץ במחלוקות הנוגעות לזכויות וחובות הצדדים, הפרות הסכם, תשלומים, שימוש בנכס וסעדים.",
+    "body_en": "Representation and counsel in disputes concerning the rights and obligations of the parties, breach of agreement, payments, use of the property, and remedies."
+  },
+  {
+    "slug": "management-companies-commercial-centers",
+    "order": 6,
+    "title_he": "ליווי משפטי לחברות ניהול ומרכזים מסחריים",
+    "title_en": "Legal Support for Management Companies & Commercial Centers",
+    "short_he": "ייעוץ וייצוג בענייני ניהול נכסים מסחריים והתקשרויות עם שוכרים וספקים.",
+    "short_en": "Counsel and representation in commercial property management, and dealings with tenants and suppliers.",
+    "body_he": "ייעוץ וייצוג בענייני ניהול נכסים מסחריים, דמי ניהול, התקשרויות עם שוכרים וספקים ומחלוקות משפטיות.",
+    "body_en": "Counsel and representation in commercial property management matters, management fees, dealings with tenants and suppliers, and legal disputes."
+  }
+]

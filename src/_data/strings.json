@@ -1,0 +1,124 @@
+{
+  "he": {
+    "lang": "he",
+    "dir": "rtl",
+    "otherLangLabel": "English",
+    "otherLangCode": "en",
+    "skipToContent": "דלג לתוכן הראשי",
+    "nav": {
+      "home": "בית",
+      "about": "אודות",
+      "practiceAreas": "תחומי עיסוק",
+      "cases": "תיקים נבחרים",
+      "clients": "לקוחות",
+      "articles": "מאמרים",
+      "contact": "צור קשר"
+    },
+    "cta": {
+      "headerButton": "ייעוץ משפטי",
+      "contact": "צרו קשר",
+      "practiceAreas": "תחומי עיסוק",
+      "readMore": "קראו עוד",
+      "backToArticles": "חזרה למאמרים ותובנות",
+      "backToPracticeAreas": "חזרה לתחומי עיסוק",
+      "inlineCta": "מעוניינים להתייעץ? צרו קשר"
+    },
+    "footer": {
+      "tagline": "ייעוץ משפטי וליטיגציה אזרחית-מסחרית",
+      "rights": "כל הזכויות שמורות",
+      "accessibilityStatement": "הצהרת נגישות"
+    },
+    "theme": {
+      "toggleToLight": "עבור למצב תצוגה בהיר",
+      "toggleToDark": "עבור למצב תצוגה כהה"
+    },
+    "mobileMenu": {
+      "open": "פתיחת תפריט",
+      "close": "סגירת תפריט"
+    },
+    "a11y": {
+      "widgetLabel": "אפשרויות נגישות",
+      "title": "נגישות",
+      "increaseFont": "הגדלת גופן",
+      "decreaseFont": "הקטנת גופן",
+      "resetFont": "איפוס גודל גופן",
+      "highContrast": "ניגודיות גבוהה",
+      "underlineLinks": "הדגשת קישורים בקו תחתון",
+      "reduceMotion": "הפחתת אנימציות",
+      "resetAll": "איפוס כל ההגדרות",
+      "close": "סגירה",
+      "statementLink": "הצהרת נגישות"
+    },
+    "form": {
+      "fullName": "שם מלא",
+      "phone": "טלפון",
+      "email": "דוא\"ל",
+      "subject": "נושא הפנייה",
+      "message": "הודעה",
+      "submit": "שליחת פנייה",
+      "required": "שדה חובה"
+    },
+    "whatsappLabel": "צור קשר בוואטסאפ"
+  },
+  "en": {
+    "lang": "en",
+    "dir": "ltr",
+    "otherLangLabel": "עברית",
+    "otherLangCode": "he",
+    "skipToContent": "Skip to main content",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "practiceAreas": "Practice Areas",
+      "cases": "Selected Cases",
+      "clients": "Clients",
+      "articles": "Articles & Insights",
+      "contact": "Contact"
+    },
+    "cta": {
+      "headerButton": "Legal Consultation",
+      "contact": "Contact Us",
+      "practiceAreas": "Practice Areas",
+      "readMore": "Read More",
+      "backToArticles": "Back to Articles & Insights",
+      "backToPracticeAreas": "Back to Practice Areas",
+      "inlineCta": "Interested in a consultation? Get in touch."
+    },
+    "footer": {
+      "tagline": "Legal Counsel & Civil-Commercial Litigation",
+      "rights": "All rights reserved",
+      "accessibilityStatement": "Accessibility Statement"
+    },
+    "theme": {
+      "toggleToLight": "Switch to light mode",
+      "toggleToDark": "Switch to dark mode"
+    },
+    "mobileMenu": {
+      "open": "Open menu",
+      "close": "Close menu"
+    },
+    "a11y": {
+      "widgetLabel": "Accessibility options",
+      "title": "Accessibility",
+      "increaseFont": "Increase text size",
+      "decreaseFont": "Decrease text size",
+      "resetFont": "Reset text size",
+      "highContrast": "High contrast",
+      "underlineLinks": "Underline links",
+      "reduceMotion": "Reduce motion",
+      "resetAll": "Reset all settings",
+      "close": "Close",
+      "statementLink": "Accessibility Statement"
+    },
+    "form": {
+      "fullName": "Full Name",
+      "phone": "Phone",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Inquiry",
+      "required": "Required field"
+    },
+    "whatsappLabel": "Contact via WhatsApp"
+  }
+}

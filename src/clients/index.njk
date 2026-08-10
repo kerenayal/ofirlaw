@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+lang: he
+navKey: clients
+altHref: /en/clients/
+title: "לקוחות | עו\"ד אופיר עומר"
+description: "המשרד מייצג חברות, בעלי נכסים, חברות ניהול, יזמים, בעלי עסקים ולקוחות פרטיים."
+---
+<section class="page-header container">
+  <span class="eyebrow">לקוחות</span>
+  <h1>לקוחות</h1>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% if clients and clients.length > 0 %}
+    <ul class="clients-list">
+      {% for client in clients %}
+      <li>{{ client.name }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="clients-fallback">המשרד מייצג חברות, בעלי נכסים, חברות ניהול, יזמים, בעלי עסקים ולקוחות פרטיים.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container inline-cta">
+    <p>{{ strings.he.cta.inlineCta }}</p>
+    <a class="btn btn--primary" href="/contact/">צרו קשר</a>
+  </div>
+</section>

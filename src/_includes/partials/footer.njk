@@ -1,0 +1,32 @@
+{% set s = strings[lang] %}
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div>
+      <p class="brand" style="color:var(--color-text)">{{ site.lawyerName_he if lang == 'he' else site.lawyerName_en }}</p>
+      <p>{{ s.footer.tagline }}</p>
+    </div>
+    <div>
+      <h3 style="font-size:1rem">{{ s.nav.home }}</h3>
+      <ul class="site-footer__list">
+        <li><a href="{{ '/about/' | localize(lang) }}">{{ s.nav.about }}</a></li>
+        <li><a href="{{ '/practice-areas/' | localize(lang) }}">{{ s.nav.practiceAreas }}</a></li>
+        <li><a href="{{ '/cases/' | localize(lang) }}">{{ s.nav.cases }}</a></li>
+        <li><a href="{{ '/clients/' | localize(lang) }}">{{ s.nav.clients }}</a></li>
+        <li><a href="{{ '/articles/' | localize(lang) }}">{{ s.nav.articles }}</a></li>
+        <li><a href="{{ '/contact/' | localize(lang) }}">{{ s.nav.contact }}</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:1rem">{{ s.nav.contact }}</h3>
+      <ul class="site-footer__list">
+        <li>{{ site.address_he if lang == 'he' else site.address_en }}</li>
+        <li><a href="tel:{{ site.phone }}">{{ site.phone }}</a></li>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container site-footer__bottom">
+    <span><bdi dir="ltr">&copy; {{ currentYear }} {{ site.lawyerName_en }}</bdi> &mdash; {{ s.footer.rights }}.</span>
+    <a href="{{ '/accessibility/' | localize(lang) }}">{{ s.footer.accessibilityStatement }}</a>
+  </div>
+</footer>

@@ -1,0 +1,39 @@
+{% set s = strings[lang] %}
+<div class="a11y-widget" data-a11y-widget>
+  <button type="button" class="a11y-widget__toggle" data-a11y-toggle aria-haspopup="true" aria-expanded="false" aria-controls="a11y-panel" aria-label="{{ s.a11y.widgetLabel }}" title="{{ s.a11y.widgetLabel }}">
+    <span aria-hidden="true">&#9878;</span>
+  </button>
+  <div class="a11y-widget__panel" id="a11y-panel" data-a11y-panel role="dialog" aria-label="{{ s.a11y.title }}">
+    <h2>{{ s.a11y.title }}</h2>
+
+    <div class="a11y-widget__row">
+      <span>{{ s.a11y.decreaseFont }} / {{ s.a11y.increaseFont }}</span>
+      <span>
+        <button type="button" data-a11y-decrease aria-label="{{ s.a11y.decreaseFont }}">A-</button>
+        <button type="button" data-a11y-reset-font aria-label="{{ s.a11y.resetFont }}">A</button>
+        <button type="button" data-a11y-increase aria-label="{{ s.a11y.increaseFont }}">A+</button>
+      </span>
+    </div>
+
+    <div class="a11y-widget__row">
+      <span>{{ s.a11y.highContrast }}</span>
+      <button type="button" data-a11y-contrast aria-pressed="false">{{ s.a11y.highContrast }}</button>
+    </div>
+
+    <div class="a11y-widget__row">
+      <span>{{ s.a11y.underlineLinks }}</span>
+      <button type="button" data-a11y-underline aria-pressed="false">{{ s.a11y.underlineLinks }}</button>
+    </div>
+
+    <div class="a11y-widget__row">
+      <span>{{ s.a11y.reduceMotion }}</span>
+      <button type="button" data-a11y-motion aria-pressed="false">{{ s.a11y.reduceMotion }}</button>
+    </div>
+
+    <button type="button" class="btn a11y-widget__reset" data-a11y-reset-all>{{ s.a11y.resetAll }}</button>
+    <p style="margin-top: 0.75rem; font-size: 0.85rem;">
+      <a href="{{ '/accessibility/' | localize(lang) }}">{{ s.a11y.statementLink }}</a>
+    </p>
+    <button type="button" class="btn" style="margin-top: 0.5rem; width: 100%;" data-a11y-close>{{ s.a11y.close }}</button>
+  </div>
+</div>

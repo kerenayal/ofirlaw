@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+lang: he
+navKey: practiceAreas
+pagination:
+  data: practiceAreas
+  size: 1
+  alias: area
+permalink: "/practice-areas/{{ area.slug }}/"
+eleventyComputed:
+  title: "{{ area.title_he }} | עו\"ד אופיר עומר"
+  description: "{{ area.short_he }}"
+  altHref: "/en/practice-areas/{{ area.slug }}/"
+---
+<section class="page-header container">
+  <span class="eyebrow">תחומי עיסוק</span>
+  <h1>{{ area.title_he }}</h1>
+</section>
+
+<section class="section">
+  <div class="container prose">
+    <p>{{ area.body_he }}</p>
+    <a class="card__link" href="/practice-areas/">{{ strings.he.cta.backToPracticeAreas }}</a>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container inline-cta">
+    <p>{{ strings.he.cta.inlineCta }}</p>
+    <a class="btn btn--primary" href="/contact/">צרו קשר</a>
+  </div>
+</section>

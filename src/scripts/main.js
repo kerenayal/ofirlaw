@@ -1,0 +1,115 @@
+(function () {
+  "use strict";
+
+  /* Header shrink-on-scroll */
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 24);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
+  /* Mobile nav */
+  var hamburger = document.querySelector(".hamburger");
+  var mobileNav = document.querySelector(".mobile-nav");
+  var mobileNavClose = document.querySelector(".mobile-nav__close");
+  function openMobileNav() {
+    if (!mobileNav) return;
+    mobileNav.classList.add("is-open");
+    hamburger.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+  function closeMobileNav() {
+    if (!mobileNav) return;
+    mobileNav.classList.remove("is-open");
+    hamburger.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener("click", openMobileNav);
+    if (mobileNavClose) mobileNavClose.addEventListener("click", closeMobileNav);
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", closeMobileNav);
+    });
+  }
+
+  /* Case category filters */
+  var filterBar = document.querySelector("[data-case-filters]");
+  var caseGrid = document.querySelector("[data-case-grid]");
+  if (filterBar && caseGrid) {
+    var cards = caseGrid.querySelectorAll("[data-category]");
+    filterBar.addEventListener("click", function (e) {
+      var btn = e.target.closest("button[data-filter]");
+      if (!btn) return;
+      filterBar.querySelectorAll("button").forEach(function (b) {
+        b.classList.remove("is-active");
+      });
+      btn.classList.add("is-active");
+      var filter = btn.getAttribute("data-filter");
+      cards.forEach(function (card) {
+        var show = filter === "all" || card.getAttribute("data-category") === filter;
+        card.style.display = show ? "" : "none";
+      });
+    });
+  }
+
+  /* Theme toggle (light/dark) */
+  var themeToggle = document.querySelector("[data-theme-toggle]");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      var root = document.documentElement;
+      var current = root.getAttribute("data-theme");
+      var next = current === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try {
+        localStorage.setItem("ofirlaw-theme", next);
+      } catch (e) {}
+      updateThemeToggleLabel(next);
+    });
+  }
+  function updateThemeToggleLabel(theme) {
+    if (!themeToggle) return;
+    var toLight = themeToggle.getAttribute("data-label-to-light");
+    var toDark = themeToggle.getAttribute("data-label-to-dark");
+    var label = theme === "dark" ? toLight : toDark;
+    themeToggle.setAttribute("aria-label", label);
+    themeToggle.setAttribute("title", label);
+  }
+  if (themeToggle) {
+    updateThemeToggleLabel(document.documentElement.getAttribute("data-theme") || "light");
+  }
+
+  /* Contact form -> mailto (no backend configured yet) */
+  var contactForm = document.querySelector("[data-contact-form]");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var data = new FormData(contactForm);
+      var name = (data.get("name") || "").toString();
+      var phone = (data.get("phone") || "").toString();
+      var email = (data.get("email") || "").toString();
+      var subject = (data.get("subject") || "").toString();
+      var message = (data.get("message") || "").toString();
+      var to = contactForm.getAttribute("data-mailto") || "";
+
+      var bodyLines = [];
+      bodyLines.push(contactForm.getAttribute("data-label-name") + ": " + name);
+      bodyLines.push(contactForm.getAttribute("data-label-phone") + ": " + phone);
+      bodyLines.push(contactForm.getAttribute("data-label-email") + ": " + email);
+      bodyLines.push("");
+      bodyLines.push(message);
+
+      var mailto =
+        "mailto:" +
+        encodeURIComponent(to) +
+        "?subject=" +
+        encodeURIComponent(subject || "פנייה מאתר האינטרנט") +
+        "&body=" +
+        encodeURIComponent(bodyLines.join("\n"));
+
+      window.location.href = mailto;
+    });
+  }
+})();

@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+lang: en
+navKey: articles
+pagination:
+  data: articles
+  size: 1
+  alias: article
+permalink: "/en/articles/{{ article.slug }}/"
+eleventyComputed:
+  title: "{{ article.title_en }} | Ofir Omer, Adv."
+  description: "{{ article.summary_en }}"
+  altHref: "/articles/{{ article.slug }}/"
+---
+<section class="page-header container">
+  <span class="eyebrow">{{ article.categoryLabel_en }}</span>
+  <h1>{{ article.title_en }}</h1>
+  <time datetime="{{ article.date | isoDate }}">{{ article.date | dateEn }}</time>
+</section>
+
+<section class="section">
+  <div class="container prose">
+    {{ article.content_en | paragraphs | safe }}
+    <p><a class="card__link" href="/en/articles/">{{ strings.en.cta.backToArticles }}</a></p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container inline-cta">
+    <p>{{ strings.en.cta.inlineCta }}</p>
+    <a class="btn btn--primary" href="/en/contact/">Contact Us</a>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+---
+layout: layouts/base.njk
+lang: en
+navKey: cases
+altHref: /cases/
+title: "Selected Cases & Professional Experience | Ofir Omer, Adv."
+description: "Selected cases by practice area: civil and commercial litigation, real estate, contractual disputes, property management, and monetary claims."
+---
+<section class="page-header container">
+  <span class="eyebrow">Professional Experience</span>
+  <h1>Selected Cases & Professional Experience</h1>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="case-filters" data-case-filters>
+      <button type="button" class="is-active" data-filter="all">All</button>
+      {% for cat in caseCategories %}
+      <button type="button" data-filter="{{ cat.category }}">{{ cat.field_en }}</button>
+      {% endfor %}
+    </div>
+
+    <div class="grid" data-case-grid>
+      {% for item in cases %}
+      <article class="card case-card" data-category="{{ item.category }}">
+        <span class="case-card__field">{{ item.field_en }}</span>
+        <dl>
+          <div>
+            <dt>The Challenge</dt>
+            <dd>{{ item.challenge_en }}</dd>
+          </div>
+          <div>
+            <dt>The Strategy</dt>
+            <dd>{{ item.strategy_en }}</dd>
+          </div>
+          <div>
+            <dt>The Outcome</dt>
+            <dd>{{ item.outcome_en }}</dd>
+          </div>
+        </dl>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container inline-cta">
+    <p>{{ strings.en.cta.inlineCta }}</p>
+    <a class="btn btn--primary" href="/en/contact/">Contact Us</a>
+  </div>
+</section>

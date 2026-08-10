@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+lang: en
+navKey: accessibility
+altHref: /accessibility/
+title: "Accessibility Statement | Ofir Omer, Adv."
+description: "The accessibility statement for the Ofir Omer, Adv. website."
+---
+<section class="page-header container">
+  <span class="eyebrow">Accessibility</span>
+  <h1>Accessibility Statement</h1>
+</section>
+
+<section class="section prose container">
+  <p>The office of Ofir Omer, Adv. places great importance on providing equal and accessible service to all website visitors, including people with disabilities.</p>
+
+  <h2>Conformance Level</h2>
+  <p>{{ site.accessibility.conformanceLevel_en }}</p>
+
+  <h2>Accessibility Features on This Site</h2>
+  <ul>
+    <li>Valid semantic structure and hierarchical headings (H1–H3)</li>
+    <li>Full keyboard navigation, including a "skip to main content" link</li>
+    <li>A floating accessibility toolbar for text resizing, high-contrast mode, link underlining, and reduced motion</li>
+    <li>Full support for Hebrew (RTL) and English (LTR)</li>
+    <li>Alt text for images</li>
+    <li>Text-to-background color contrast has been reviewed</li>
+  </ul>
+
+  <h2>Known Limitations</h2>
+  <p>[TO COMPLETE]</p>
+
+  <h2>Accessibility Contact</h2>
+  <p>Encountered an accessibility issue on this site? We would like to hear from you and address it.</p>
+  <p>
+    Accessibility Coordinator: {{ site.accessibility.coordinatorName }}<br>
+    Phone: {{ site.accessibility.coordinatorPhone }}<br>
+    Email: {{ site.accessibility.coordinatorEmail }}
+  </p>
+
+  <p>Last updated: {{ site.accessibility.statementDate }}</p>
+</section>

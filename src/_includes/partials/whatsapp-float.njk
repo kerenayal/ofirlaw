@@ -1,0 +1,8 @@
+{% if site.whatsapp %}
+{% set s = strings[lang] %}
+<a class="whatsapp-float" href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener" aria-label="{{ s.whatsappLabel }}" title="{{ s.whatsappLabel }}">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+    <path d="M16 3C9.373 3 4 8.373 4 15c0 2.34.664 4.523 1.813 6.375L4 29l7.813-1.75A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 21.8c-1.94 0-3.75-.56-5.28-1.53l-.38-.23-4.64 1.04 1.02-4.53-.25-.39A9.77 9.77 0 0 1 5.2 15c0-5.96 4.85-10.8 10.8-10.8S26.8 9.04 26.8 15 21.96 24.8 16 24.8z"/>
+  </svg>
+</a>
+{% endif %}

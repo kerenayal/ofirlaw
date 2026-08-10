@@ -1,0 +1,56 @@
+---
+layout: layouts/base.njk
+lang: en
+navKey: contact
+altHref: /contact/
+title: "Contact | Ofir Omer, Adv."
+description: "A complex legal matter first requires a precise understanding of the full picture. Leave your details and we will be in touch to review your options."
+---
+<section class="page-header container">
+  <span class="eyebrow">Contact</span>
+  <h1>Let's Talk</h1>
+  <p class="prose">A complex legal matter first requires a precise understanding of the full picture. Leave your details and we will be in touch to review the options available to you.</p>
+</section>
+
+<section class="section">
+  <div class="container two-col">
+    <form
+      data-contact-form
+      data-mailto="{{ site.email }}"
+      data-label-name="{{ strings.en.form.fullName }}"
+      data-label-phone="{{ strings.en.form.phone }}"
+      data-label-email="{{ strings.en.form.email }}"
+    >
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">{{ strings.en.form.fullName }}</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">{{ strings.en.form.phone }}</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="field full">
+          <label for="email">{{ strings.en.form.email }}</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field full">
+          <label for="subject">{{ strings.en.form.subject }}</label>
+          <input type="text" id="subject" name="subject">
+        </div>
+        <div class="field full">
+          <label for="message">{{ strings.en.form.message }}</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn--primary" style="margin-top: 1.5rem;">{{ strings.en.form.submit }}</button>
+    </form>
+
+    <div class="prose">
+      <h2>{{ site.lawyerName_en }}</h2>
+      <p>{{ site.address_en }}</p>
+      <p><a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+    </div>
+  </div>
+</section>

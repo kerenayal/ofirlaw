@@ -1,0 +1,74 @@
+{% set s = strings[lang] %}
+<!doctype html>
+<html lang="{{ lang }}" dir="{{ s.dir }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="alternate" hreflang="he" href="{{ site.url }}{{ page.url if lang == 'he' else altHref }}">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}{{ altHref if lang == 'he' else page.url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url if lang == 'he' else altHref }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ site.url }}{{ site.ogImage }}">
+  <meta property="og:locale" content="{{ 'he_IL' if lang == 'he' else 'en_US' }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600&family=Heebo:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles/main.css">
+
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("ofirlaw-theme");
+        if (theme) document.documentElement.setAttribute("data-theme", theme);
+        var a11y = JSON.parse(localStorage.getItem("ofirlaw-a11y") || "{}");
+        if (a11y.fontScale) document.documentElement.style.setProperty("--font-scale", a11y.fontScale);
+        if (a11y.contrast) document.documentElement.setAttribute("data-contrast", "high");
+        if (a11y.underline) document.documentElement.setAttribute("data-underline-links", "true");
+        if (a11y.motion) document.documentElement.setAttribute("data-motion", "reduce");
+      } catch (e) {}
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Attorney",
+    "name": "{{ site.lawyerName_en }}",
+    "url": "{{ site.url }}",
+    "image": "{{ site.url }}{{ site.portraitLarge }}",
+    "telephone": "{{ site.phone }}",
+    "email": "{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ramat Gan",
+      "addressCountry": "IL"
+    },
+    "areaServed": "IL",
+    "knowsLanguage": ["he", "en"]
+  }
+  </script>
+</head>
+<body>
+  {% include "partials/header.njk" %}
+
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+  {% include "partials/whatsapp-float.njk" %}
+  {% include "partials/a11y-widget.njk" %}
+
+  <script src="/scripts/main.js"></script>
+  <script src="/scripts/a11y-widget.js"></script>
+</body>
+</html>

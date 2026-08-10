@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+lang: en
+navKey: clients
+altHref: /clients/
+title: "Clients | Ofir Omer, Adv."
+description: "The firm represents companies, property owners, management companies, entrepreneurs, business owners, and private clients."
+---
+<section class="page-header container">
+  <span class="eyebrow">Clients</span>
+  <h1>Clients</h1>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% if clients and clients.length > 0 %}
+    <ul class="clients-list">
+      {% for client in clients %}
+      <li>{{ client.name }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="clients-fallback">The firm represents companies, property owners, management companies, entrepreneurs, business owners, and private clients.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container inline-cta">
+    <p>{{ strings.en.cta.inlineCta }}</p>
+    <a class="btn btn--primary" href="/en/contact/">Contact Us</a>
+  </div>
+</section>

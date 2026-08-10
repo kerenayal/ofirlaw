@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+lang: en
+navKey: practiceAreas
+altHref: /practice-areas/
+title: "Practice Areas | Ofir Omer, Adv."
+description: "Civil and commercial litigation, real estate and property management, corporate law, commercial contracts, and counsel for management companies — the firm's core practice areas."
+---
+<section class="page-header container">
+  <span class="eyebrow">Practice Areas</span>
+  <h1>Practice Areas</h1>
+  <p class="prose">The firm focuses on a defined set of core areas, providing deep, dedicated support in each — rather than broad, generalist representation.</p>
+</section>
+
+<section class="section">
+  <div class="container grid">
+    {% for area in practiceAreas %}
+    <article class="card">
+      <h2 class="card__title">{{ area.title_en }}</h2>
+      <p>{{ area.short_en }}</p>
+      <a class="card__link" href="/en/practice-areas/{{ area.slug }}/">Read More</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container inline-cta">
+    <p>{{ strings.en.cta.inlineCta }}</p>
+    <a class="btn btn--primary" href="/en/contact/">Contact Us</a>
+  </div>
+</section>

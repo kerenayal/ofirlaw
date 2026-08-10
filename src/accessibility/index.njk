@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+lang: he
+navKey: accessibility
+altHref: /en/accessibility/
+title: "הצהרת נגישות | עו\"ד אופיר עומר"
+description: "הצהרת הנגישות של אתר האינטרנט של עו\"ד אופיר עומר."
+---
+<section class="page-header container">
+  <span class="eyebrow">נגישות</span>
+  <h1>הצהרת נגישות</h1>
+</section>
+
+<section class="section prose container">
+  <p>משרד עו"ד אופיר עומר רואה חשיבות רבה במתן שירות שוויוני ונגיש לכלל הגולשים באתר, לרבות אנשים עם מוגבלות.</p>
+
+  <h2>רמת הנגישות</h2>
+  <p>{{ site.accessibility.conformanceLevel_he }}</p>
+
+  <h2>אמצעי הנגישות באתר</h2>
+  <ul>
+    <li>מבנה סמנטי תקין וכותרות מדורגות (H1–H3)</li>
+    <li>ניווט מלא באמצעות מקלדת, כולל קישור "דילוג לתוכן הראשי"</li>
+    <li>תפריט נגישות צף המאפשר הגדלה/הקטנה של גודל הטקסט, מצב ניגודיות גבוהה, הדגשת קישורים והפחתת אנימציות</li>
+    <li>תמיכה מלאה בעברית (RTL) ובאנגלית (LTR)</li>
+    <li>טקסט חלופי לתמונות</li>
+    <li>ניגודיות צבעים נבדקת בין טקסט לרקע</li>
+  </ul>
+
+  <h2>מגבלות ידועות</h2>
+  <p>[להשלמה]</p>
+
+  <h2>פנייה בנושא נגישות</h2>
+  <p>נתקלתם בבעיית נגישות באתר? נשמח לשמוע ולטפל בפנייתכם.</p>
+  <p>
+    רכז/ת נגישות: {{ site.accessibility.coordinatorName }}<br>
+    טלפון: {{ site.accessibility.coordinatorPhone }}<br>
+    דוא"ל: {{ site.accessibility.coordinatorEmail }}
+  </p>
+
+  <p>תאריך עדכון הצהרה זו: {{ site.accessibility.statementDate }}</p>
+</section>

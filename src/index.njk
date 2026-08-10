@@ -1,0 +1,80 @@
+---
+layout: layouts/base.njk
+lang: he
+navKey: home
+altHref: /en/
+title: "עו\"ד אופיר עומר | ליטיגציה, משפט מסחרי ומקרקעין"
+description: "עו\"ד אופיר עומר – ייעוץ משפטי וייצוג בליטיגציה אזרחית-מסחרית, מקרקעין, חוזים, חברות וניהול נכסים. ייצוג אישי, מקצועי ואסטרטגי."
+---
+<section class="container hero">
+  <div class="hero__content">
+    <span class="eyebrow">עו"ד אופיר עומר</span>
+    <h1>משפט. אסטרטגיה. תוצאה.</h1>
+    <p>משרד בוטיק המתמחה בייעוץ משפטי, ליטיגציה אזרחית-מסחרית וייצוג חברות, בעלי עסקים ולקוחות פרטיים במצבים משפטיים מורכבים.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="/contact/">צרו קשר</a>
+      <a class="btn btn--ghost" href="/practice-areas/">תחומי עיסוק</a>
+    </div>
+  </div>
+  <div class="hero__portrait">
+    <img src="{{ site.portraitLarge }}" alt="עו&quot;ד אופיר עומר">
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container two-col">
+    <div>
+      <span class="eyebrow">ניסיון ומומחיות</span>
+      <h2>ידע משפטי לצד חשיבה עסקית</h2>
+      <p>המשרד מלווה חברות, בעלי עסקים ולקוחות פרטיים בסוגיות משפטיות מורכבות, תוך שילוב בין הבנה משפטית מדויקת לבין חשיבה אסטרטגית המותאמת למטרות הלקוח.</p>
+      <a class="card__link" href="/about/">אודות עו"ד אופיר עומר</a>
+    </div>
+    <div>
+      <span class="eyebrow">גישה מקצועית</span>
+      <h2>מעורבות אישית בכל תיק</h2>
+      <p>כל תיק מקבל טיפול אישי וישיר מעורך הדין עצמו — זמינות, דיסקרטיות ותשומת לב לפרטים לאורך כל ההליך.</p>
+      <a class="card__link" href="/contact/">קביעת שיחת ייעוץ</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">תחומי עיסוק מרכזיים</span>
+    <h2>תחומי עיסוק</h2>
+    <div class="grid">
+      {% for area in practiceAreas %}
+      <article class="card">
+        <h3 class="card__title">{{ area.title_he }}</h3>
+        <p>{{ area.short_he }}</p>
+        <a class="card__link" href="/practice-areas/{{ area.slug }}/">קראו עוד</a>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <span class="eyebrow">תיקים נבחרים</span>
+    <h2>ניסיון מקצועי לאורך זמן</h2>
+    <p class="prose">המשרד מייצג לקוחות במגוון תחומים — ליטיגציה אזרחית ומסחרית, מקרקעין, סכסוכים חוזיים וניהול נכסים — תוך ניהול אסטרטגי של ההליך והתאמת הפתרון המשפטי למטרות הלקוח.</p>
+    <a class="btn btn--ghost" href="/cases/">לכל התיקים הנבחרים</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">לקוחות</span>
+    <h2>מי אנחנו מייצגים</h2>
+    <p class="prose">חברות, בעלי נכסים, חברות ניהול, יזמים, בעלי עסקים ולקוחות פרטיים.</p>
+    <a class="btn btn--ghost" href="/clients/">עמוד הלקוחות</a>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container inline-cta">
+    <p>{{ strings.he.cta.inlineCta }}</p>
+    <a class="btn btn--primary" href="/contact/">צרו קשר</a>
+  </div>
+</section>

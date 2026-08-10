@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+lang: en
+navKey: practiceAreas
+pagination:
+  data: practiceAreas
+  size: 1
+  alias: area
+permalink: "/en/practice-areas/{{ area.slug }}/"
+eleventyComputed:
+  title: "{{ area.title_en }} | Ofir Omer, Adv."
+  description: "{{ area.short_en }}"
+  altHref: "/practice-areas/{{ area.slug }}/"
+---
+<section class="page-header container">
+  <span class="eyebrow">Practice Areas</span>
+  <h1>{{ area.title_en }}</h1>
+</section>
+
+<section class="section">
+  <div class="container prose">
+    <p>{{ area.body_en }}</p>
+    <a class="card__link" href="/en/practice-areas/">{{ strings.en.cta.backToPracticeAreas }}</a>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container inline-cta">
+    <p>{{ strings.en.cta.inlineCta }}</p>
+    <a class="btn btn--primary" href="/en/contact/">Contact Us</a>
+  </div>
+</section>

@@ -45,7 +45,14 @@ npm run build    # production build to _site/
 
 ## Known placeholders to fill in before launch
 
-- `src/_data/site.json` — phone, email, WhatsApp number, real domain URL, accessibility coordinator details.
-- `src/assets/images/` — replace the placeholder SVGs with a real portrait photo and a JPG/PNG Open Graph share image (1200×630).
+- `src/_data/site.json` — WhatsApp number (phone/mobile/fax/email/address are already filled in), real domain URL, accessibility coordinator details.
+- `src/assets/images/` — portrait photo is in place; still need a JPG/PNG Open Graph share image (1200×630) to replace `og-image-placeholder.svg`.
 - `src/content/cases/*.json` and `src/content/articles/*.json` — currently template entries with `[להשלמה]` placeholders; fill in with real case summaries and articles as they're approved for publication (see CONTENT-GUIDE.md).
 - `src/content/clients.json` — currently empty; only add client names/logos that are cleared for public use.
+
+## Roadmap
+
+Requested but intentionally not yet implemented:
+
+- **Icons for contact details** — add icons next to phone, mobile, fax, and email in the footer and on the Contact page (currently text-only with labels).
+- **Map on the Contact page** — embed a map showing the office address (Moshe Aviv Tower, Ramat Gan). Needs a decision on approach: a lightweight static map image (no third-party script, simplest, but not interactive) vs. an embedded Google Maps iframe (interactive, but pulls in a third-party service — would also need a mention in the privacy policy's "automatically collected information" section, similar to the existing Google Fonts note).

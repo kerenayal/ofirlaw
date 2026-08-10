@@ -450,6 +450,33 @@ textarea:focus-visible,
   flex-wrap: wrap;
   gap: var(--space-1);
 }
+
+.disclaimer {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-3);
+  margin-top: var(--space-4);
+}
+.disclaimer summary {
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+.disclaimer summary::-webkit-details-marker { display: none; }
+.disclaimer summary::before {
+  content: "+";
+  color: var(--color-gold-strong);
+  font-size: 1.1rem;
+  line-height: 1;
+  width: 1em;
+}
+.disclaimer[open] summary::before { content: "\2013"; }
+.disclaimer__body { margin-top: var(--space-2); max-width: 70ch; }
+.disclaimer__body p { font-size: 0.82rem; }
 @media (max-width: 720px) { .site-footer__grid { grid-template-columns: 1fr; } }
 
 /* ==========================================================================

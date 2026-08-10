@@ -27,7 +27,9 @@
       "tagline": "ייעוץ משפטי וליטיגציה אזרחית-מסחרית",
       "rights": "כל הזכויות שמורות",
       "accessibilityStatement": "הצהרת נגישות",
-      "privacyPolicy": "מדיניות פרטיות"
+      "privacyPolicy": "מדיניות פרטיות",
+      "disclaimerTitle": "כתב ויתור",
+      "disclaimerText": "המידע המופיע באתר זה מסופק למטרות הסברה בלבד, ואין להתייחס אליו כאל ייעוץ משפטי בכל נושא שהוא ואין להסתמך עליו ככזה. עו\"ד אופיר עומר אינו נושא באחריות כלשהי בקשר לכל ההשלכות האפשריות הנובעות משימוש במידע המופיע באתר זה.\n\nגישה למידע הכלול באתר זה לא תיחשב בשום פנים ואופן כיצירת יחסי עורך דין-לקוח בין עו\"ד אופיר עומר לבין כל גורם הניגש לאתר זה. פנייה באמצעות דואר אלקטרוני, או שליחת מידע ללא הסכמה מוקדמת של עו\"ד אופיר עומר, לא תתפרש כיצירה אוטומטית של יחסי עורך דין-לקוח בין עו\"ד אופיר עומר לבין הצד השולח את הדואר האלקטרוני או המידע.\n\nהחומר הכלול באתר זה נוצר על ידי עו\"ד אופיר עומר ונשאר בבעלותו הבלעדית. אין לשכפל, להעביר, לפרסם או להפיץ בכל דרך אחרת את המידע הכלול באתר זה, אלא אם התקבלה הסכמה בכתב ומראש של עו\"ד אופיר עומר.\n\nאתר זה עשוי להכיל קישורים לאתרי אינטרנט אחרים המופעלים על ידי צדדים שלישיים. עו\"ד אופיר עומר אינו נותן חסות לתוכן אתרים אלה, אינו מאשר או תומך בו, ואינו אחראי לתכנים המופיעים בהם."
     },
     "theme": {
       "toggleToLight": "עבור למצב תצוגה בהיר",
@@ -89,7 +91,9 @@
       "tagline": "Legal Counsel & Civil-Commercial Litigation",
       "rights": "All rights reserved",
       "accessibilityStatement": "Accessibility Statement",
-      "privacyPolicy": "Privacy Policy"
+      "privacyPolicy": "Privacy Policy",
+      "disclaimerTitle": "Disclaimer",
+      "disclaimerText": "The information on this website is provided for general informational purposes only. It should not be regarded as legal advice on any matter and should not be relied upon as such. Ofir Omer, Adv. bears no responsibility for any consequences arising from the use of the information appearing on this website.\n\nAccess to the information contained on this website shall not, under any circumstances, be construed as creating an attorney-client relationship between Ofir Omer, Adv. and any party accessing this website. Contacting via email, or sending information without the prior consent of Ofir Omer, Adv., shall not be construed as automatically creating an attorney-client relationship between Ofir Omer, Adv. and the party sending the email or information.\n\nThe material contained on this website was created by, and remains the exclusive property of, Ofir Omer, Adv. It is prohibited to copy, transmit, publish, or otherwise distribute the information contained on this website without the prior written consent of Ofir Omer, Adv.\n\nThis website may contain links to other websites operated by third parties. Ofir Omer, Adv. does not sponsor, endorse, or support the content of any such website and is not responsible for the content appearing on it."
     },
     "theme": {
       "toggleToLight": "Switch to light mode",

@@ -25,6 +25,14 @@
       </ul>
     </div>
   </div>
+  <div class="container">
+    <details class="disclaimer">
+      <summary>{{ s.footer.disclaimerTitle }}</summary>
+      <div class="disclaimer__body prose">
+        {{ s.footer.disclaimerText | paragraphs | safe }}
+      </div>
+    </details>
+  </div>
   <div class="container site-footer__bottom">
     <span><bdi dir="ltr">&copy; {{ currentYear }} {{ site.lawyerName_en }}</bdi> &mdash; {{ s.footer.rights }}.</span>
     <span class="site-footer__legal-links">

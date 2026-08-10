@@ -8,12 +8,12 @@
     <div>
       <h3 style="font-size:1rem">{{ s.nav.home }}</h3>
       <ul class="site-footer__list">
-        <li><a href="{{ '/about/' | localize(lang) }}">{{ s.nav.about }}</a></li>
-        <li><a href="{{ '/practice-areas/' | localize(lang) }}">{{ s.nav.practiceAreas }}</a></li>
-        <li><a href="{{ '/cases/' | localize(lang) }}">{{ s.nav.cases }}</a></li>
-        <li><a href="{{ '/clients/' | localize(lang) }}">{{ s.nav.clients }}</a></li>
-        <li><a href="{{ '/articles/' | localize(lang) }}">{{ s.nav.articles }}</a></li>
-        <li><a href="{{ '/contact/' | localize(lang) }}">{{ s.nav.contact }}</a></li>
+        <li><a href="{{ '/about/' | localize(lang) | url }}">{{ s.nav.about }}</a></li>
+        <li><a href="{{ '/practice-areas/' | localize(lang) | url }}">{{ s.nav.practiceAreas }}</a></li>
+        <li><a href="{{ '/cases/' | localize(lang) | url }}">{{ s.nav.cases }}</a></li>
+        <li><a href="{{ '/clients/' | localize(lang) | url }}">{{ s.nav.clients }}</a></li>
+        <li><a href="{{ '/articles/' | localize(lang) | url }}">{{ s.nav.articles }}</a></li>
+        <li><a href="{{ '/contact/' | localize(lang) | url }}">{{ s.nav.contact }}</a></li>
       </ul>
     </div>
     <div>
@@ -27,6 +27,6 @@
   </div>
   <div class="container site-footer__bottom">
     <span><bdi dir="ltr">&copy; {{ currentYear }} {{ site.lawyerName_en }}</bdi> &mdash; {{ s.footer.rights }}.</span>
-    <a href="{{ '/accessibility/' | localize(lang) }}">{{ s.footer.accessibilityStatement }}</a>
+    <a href="{{ '/accessibility/' | localize(lang) | url }}">{{ s.footer.accessibilityStatement }}</a>
   </div>
 </footer>

@@ -14,7 +14,7 @@ description: "Ofir Omer, Adv. advises companies, business owners, and private cl
 <section class="section">
   <div class="container two-col">
     <div class="hero__portrait">
-      <img src="{{ site.portraitLarge }}" alt="Ofir Omer, Adv.">
+      <img src="{{ site.portraitLarge | url }}" alt="Ofir Omer, Adv.">
     </div>
     <div class="prose">
       <p>Ofir Omer, Adv. advises companies, business owners, and private clients on legal counsel and civil-commercial litigation, managing complex disputes with sensitivity and precision.</p>
@@ -35,6 +35,6 @@ description: "Ofir Omer, Adv. advises companies, business owners, and private cl
 <section class="section">
   <div class="container inline-cta">
     <p>{{ strings.en.cta.inlineCta }}</p>
-    <a class="btn btn--primary" href="/en/contact/">Contact Us</a>
+    <a class="btn btn--primary" href="{{ '/en/contact/' | url }}">Contact Us</a>
   </div>
 </section>

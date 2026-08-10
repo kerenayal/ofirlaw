@@ -20,13 +20,13 @@ eleventyComputed:
 <section class="section">
   <div class="container prose">
     <p>{{ area.body_en }}</p>
-    <a class="card__link" href="/en/practice-areas/">{{ strings.en.cta.backToPracticeAreas }}</a>
+    <a class="card__link" href="{{ '/en/practice-areas/' | url }}">{{ strings.en.cta.backToPracticeAreas }}</a>
   </div>
 </section>
 
 <section class="section section--alt">
   <div class="container inline-cta">
     <p>{{ strings.en.cta.inlineCta }}</p>
-    <a class="btn btn--primary" href="/en/contact/">Contact Us</a>
+    <a class="btn btn--primary" href="{{ '/en/contact/' | url }}">Contact Us</a>
   </div>
 </section>

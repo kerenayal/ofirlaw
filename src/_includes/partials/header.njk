@@ -2,22 +2,22 @@
 <a class="skip-link" href="#main-content">{{ s.skipToContent }}</a>
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="brand" href="{{ '/' | localize(lang) }}">{{ site.lawyerName_he if lang == 'he' else site.lawyerName_en }}</a>
+    <a class="brand" href="{{ '/' | localize(lang) | url }}">{{ site.lawyerName_he if lang == 'he' else site.lawyerName_en }}</a>
 
     <nav class="main-nav" aria-label="{{ s.nav.home }}">
       <ul class="main-nav__list">
-        <li><a href="{{ '/about/' | localize(lang) }}" {% if navKey == 'about' %}aria-current="page"{% endif %}>{{ s.nav.about }}</a></li>
-        <li><a href="{{ '/practice-areas/' | localize(lang) }}" {% if navKey == 'practiceAreas' %}aria-current="page"{% endif %}>{{ s.nav.practiceAreas }}</a></li>
-        <li><a href="{{ '/cases/' | localize(lang) }}" {% if navKey == 'cases' %}aria-current="page"{% endif %}>{{ s.nav.cases }}</a></li>
-        <li><a href="{{ '/clients/' | localize(lang) }}" {% if navKey == 'clients' %}aria-current="page"{% endif %}>{{ s.nav.clients }}</a></li>
-        <li><a href="{{ '/articles/' | localize(lang) }}" {% if navKey == 'articles' %}aria-current="page"{% endif %}>{{ s.nav.articles }}</a></li>
-        <li><a href="{{ '/contact/' | localize(lang) }}" {% if navKey == 'contact' %}aria-current="page"{% endif %}>{{ s.nav.contact }}</a></li>
+        <li><a href="{{ '/about/' | localize(lang) | url }}" {% if navKey == 'about' %}aria-current="page"{% endif %}>{{ s.nav.about }}</a></li>
+        <li><a href="{{ '/practice-areas/' | localize(lang) | url }}" {% if navKey == 'practiceAreas' %}aria-current="page"{% endif %}>{{ s.nav.practiceAreas }}</a></li>
+        <li><a href="{{ '/cases/' | localize(lang) | url }}" {% if navKey == 'cases' %}aria-current="page"{% endif %}>{{ s.nav.cases }}</a></li>
+        <li><a href="{{ '/clients/' | localize(lang) | url }}" {% if navKey == 'clients' %}aria-current="page"{% endif %}>{{ s.nav.clients }}</a></li>
+        <li><a href="{{ '/articles/' | localize(lang) | url }}" {% if navKey == 'articles' %}aria-current="page"{% endif %}>{{ s.nav.articles }}</a></li>
+        <li><a href="{{ '/contact/' | localize(lang) | url }}" {% if navKey == 'contact' %}aria-current="page"{% endif %}>{{ s.nav.contact }}</a></li>
       </ul>
     </nav>
 
     <div class="header-controls">
-      <a class="btn btn--primary" href="{{ '/contact/' | localize(lang) }}">{{ s.cta.headerButton }}</a>
-      <a class="lang-switch" href="{{ altHref }}" hreflang="{{ s.otherLangCode }}" lang="{{ s.otherLangCode }}">{{ s.otherLangLabel }}</a>
+      <a class="btn btn--primary" href="{{ '/contact/' | localize(lang) | url }}">{{ s.cta.headerButton }}</a>
+      <a class="lang-switch" href="{{ altHref | url }}" hreflang="{{ s.otherLangCode }}" lang="{{ s.otherLangCode }}">{{ s.otherLangLabel }}</a>
       <button type="button" class="icon-toggle" data-theme-toggle data-label-to-light="{{ s.theme.toggleToLight }}" data-label-to-dark="{{ s.theme.toggleToDark }}" aria-label="{{ s.theme.toggleToDark }}">
         <span aria-hidden="true">&#9788;</span>
       </button>
@@ -36,12 +36,12 @@
     </button>
   </div>
   <ul class="mobile-nav__list">
-    <li><a href="{{ '/about/' | localize(lang) }}">{{ s.nav.about }}</a></li>
-    <li><a href="{{ '/practice-areas/' | localize(lang) }}">{{ s.nav.practiceAreas }}</a></li>
-    <li><a href="{{ '/cases/' | localize(lang) }}">{{ s.nav.cases }}</a></li>
-    <li><a href="{{ '/clients/' | localize(lang) }}">{{ s.nav.clients }}</a></li>
-    <li><a href="{{ '/articles/' | localize(lang) }}">{{ s.nav.articles }}</a></li>
-    <li><a href="{{ '/contact/' | localize(lang) }}">{{ s.nav.contact }}</a></li>
+    <li><a href="{{ '/about/' | localize(lang) | url }}">{{ s.nav.about }}</a></li>
+    <li><a href="{{ '/practice-areas/' | localize(lang) | url }}">{{ s.nav.practiceAreas }}</a></li>
+    <li><a href="{{ '/cases/' | localize(lang) | url }}">{{ s.nav.cases }}</a></li>
+    <li><a href="{{ '/clients/' | localize(lang) | url }}">{{ s.nav.clients }}</a></li>
+    <li><a href="{{ '/articles/' | localize(lang) | url }}">{{ s.nav.articles }}</a></li>
+    <li><a href="{{ '/contact/' | localize(lang) | url }}">{{ s.nav.contact }}</a></li>
   </ul>
-  <a class="btn btn--primary" style="margin-top:2rem" href="{{ '/contact/' | localize(lang) }}">{{ s.cta.headerButton }}</a>
+  <a class="btn btn--primary" style="margin-top:2rem" href="{{ '/contact/' | localize(lang) | url }}">{{ s.cta.headerButton }}</a>
 </div>

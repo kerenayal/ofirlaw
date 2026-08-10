@@ -18,7 +18,7 @@ description: "Professional insights on litigation, real estate, contracts, corpo
       <time datetime="{{ article.date | isoDate }}">{{ article.date | dateEn }}</time>
       <h2 class="card__title">{{ article.title_en }}</h2>
       <p>{{ article.summary_en }}</p>
-      <a class="card__link" href="/en/articles/{{ article.slug }}/">{{ strings.en.cta.readMore }}</a>
+      <a class="card__link" href="{{ ('/en/articles/' ~ article.slug ~ '/') | url }}">{{ strings.en.cta.readMore }}</a>
     </article>
     {% endfor %}
   </div>
@@ -27,6 +27,6 @@ description: "Professional insights on litigation, real estate, contracts, corpo
 <section class="section section--alt">
   <div class="container inline-cta">
     <p>{{ strings.en.cta.inlineCta }}</p>
-    <a class="btn btn--primary" href="/en/contact/">Contact Us</a>
+    <a class="btn btn--primary" href="{{ '/en/contact/' | url }}">Contact Us</a>
   </div>
 </section>

@@ -18,7 +18,7 @@ description: "Civil and commercial litigation, real estate and property manageme
     <article class="card">
       <h2 class="card__title">{{ area.title_en }}</h2>
       <p>{{ area.short_en }}</p>
-      <a class="card__link" href="/en/practice-areas/{{ area.slug }}/">Read More</a>
+      <a class="card__link" href="{{ ('/en/practice-areas/' ~ area.slug ~ '/') | url }}">Read More</a>
     </article>
     {% endfor %}
   </div>
@@ -27,6 +27,6 @@ description: "Civil and commercial litigation, real estate and property manageme
 <section class="section section--alt">
   <div class="container inline-cta">
     <p>{{ strings.en.cta.inlineCta }}</p>
-    <a class="btn btn--primary" href="/en/contact/">Contact Us</a>
+    <a class="btn btn--primary" href="{{ '/en/contact/' | url }}">Contact Us</a>
   </div>
 </section>

@@ -27,6 +27,9 @@
   </div>
   <div class="container site-footer__bottom">
     <span><bdi dir="ltr">&copy; {{ currentYear }} {{ site.lawyerName_en }}</bdi> &mdash; {{ s.footer.rights }}.</span>
-    <a href="{{ '/accessibility/' | localize(lang) | url }}">{{ s.footer.accessibilityStatement }}</a>
+    <span class="site-footer__legal-links">
+      <a href="{{ '/accessibility/' | localize(lang) | url }}">{{ s.footer.accessibilityStatement }}</a>
+      <a href="{{ '/privacy-policy/' | localize(lang) | url }}">{{ s.footer.privacyPolicy }}</a>
+    </span>
   </div>
 </footer>

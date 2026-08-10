@@ -26,7 +26,8 @@
     "footer": {
       "tagline": "ייעוץ משפטי וליטיגציה אזרחית-מסחרית",
       "rights": "כל הזכויות שמורות",
-      "accessibilityStatement": "הצהרת נגישות"
+      "accessibilityStatement": "הצהרת נגישות",
+      "privacyPolicy": "מדיניות פרטיות"
     },
     "theme": {
       "toggleToLight": "עבור למצב תצוגה בהיר",
@@ -87,7 +88,8 @@
     "footer": {
       "tagline": "Legal Counsel & Civil-Commercial Litigation",
       "rights": "All rights reserved",
-      "accessibilityStatement": "Accessibility Statement"
+      "accessibilityStatement": "Accessibility Statement",
+      "privacyPolicy": "Privacy Policy"
     },
     "theme": {
       "toggleToLight": "Switch to light mode",

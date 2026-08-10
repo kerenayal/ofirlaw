@@ -249,12 +249,13 @@ textarea:focus-visible,
   color: var(--color-gold-strong);
 }
 
-/* Practice-areas dropdown (desktop) */
+/* Practice-areas dropdown (desktop)
+   The <a> is left as a plain inline element (same as every sibling tab)
+   so its box model matches exactly; the caret sits beside it as a normal
+   inline-block with vertical-align, not as a flex sibling, to avoid
+   blockifying the anchor and shifting its text baseline. */
 .main-nav__list li.has-dropdown {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.2em;
 }
 .dropdown-caret {
   background: none;
@@ -262,9 +263,11 @@ textarea:focus-visible,
   color: inherit;
   cursor: pointer;
   padding: 0.3em;
+  margin-inline-start: 0.1em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  vertical-align: middle;
   line-height: 0;
   transition: transform var(--transition);
 }

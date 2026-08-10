@@ -264,6 +264,15 @@ textarea:focus-visible,
   transition: border-color var(--transition);
 }
 .icon-toggle:hover { border-color: var(--color-gold); }
+
+.icon-toggle__moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .icon-toggle__sun { display: none; }
+  :root:not([data-theme="light"]) .icon-toggle__moon { display: inline; }
+}
+:root[data-theme="dark"] .icon-toggle__sun { display: none; }
+:root[data-theme="dark"] .icon-toggle__moon { display: inline; }
+
 .lang-switch {
   border: 1px solid var(--color-border);
   padding: 0.4em 0.9em;

@@ -19,7 +19,8 @@
       <a class="btn btn--primary" href="{{ '/contact/' | localize(lang) | url }}">{{ s.cta.headerButton }}</a>
       <a class="lang-switch" href="{{ altHref | url }}" hreflang="{{ s.otherLangCode }}" lang="{{ s.otherLangCode }}">{{ s.otherLangLabel }}</a>
       <button type="button" class="icon-toggle" data-theme-toggle data-label-to-light="{{ s.theme.toggleToLight }}" data-label-to-dark="{{ s.theme.toggleToDark }}" aria-label="{{ s.theme.toggleToDark }}">
-        <span aria-hidden="true">&#9788;</span>
+        <span class="icon-toggle__sun" aria-hidden="true">&#9788;</span>
+        <span class="icon-toggle__moon" aria-hidden="true">&#9790;</span>
       </button>
       <button type="button" class="hamburger" aria-label="{{ s.mobileMenu.open }}" aria-expanded="false" aria-controls="mobile-nav">
         <span aria-hidden="true">&#9776;</span>

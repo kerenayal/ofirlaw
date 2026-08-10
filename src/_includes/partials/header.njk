@@ -10,7 +10,7 @@
         <li class="has-dropdown">
           <a href="{{ '/practice-areas/' | localize(lang) | url }}" {% if navKey == 'practiceAreas' %}aria-current="page"{% endif %}>{{ s.nav.practiceAreas }}</a>
           <button type="button" class="dropdown-caret" data-dropdown-toggle aria-expanded="false" aria-controls="practice-areas-menu" aria-haspopup="true" aria-label="{{ s.nav.practiceAreas }}">
-            <span aria-hidden="true">&#9662;</span>
+            <span class="dropdown-caret__arrow" aria-hidden="true"></span>
           </button>
           <ul class="dropdown-menu" id="practice-areas-menu" data-dropdown-menu>
             {% for area in practiceAreas %}

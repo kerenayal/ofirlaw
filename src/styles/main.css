@@ -261,12 +261,20 @@ textarea:focus-visible,
   border: none;
   color: inherit;
   cursor: pointer;
-  padding: 0.2em;
+  padding: 0.3em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  line-height: 0;
   transition: transform var(--transition);
+}
+.dropdown-caret__arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-inline-start: 4px solid transparent;
+  border-inline-end: 4px solid transparent;
+  border-top: 5px solid currentColor;
 }
 .has-dropdown:hover .dropdown-caret,
 .has-dropdown:focus-within .dropdown-caret,
@@ -371,7 +379,7 @@ textarea:focus-visible,
   .mobile-nav__top { display: flex; justify-content: space-between; align-items: center; }
   .mobile-nav__list li.has-dropdown { display: flex; flex-direction: column; gap: var(--space-2); }
   .mobile-nav__item-row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
-  .mobile-nav__item-row .dropdown-caret { font-size: 1rem; }
+  .mobile-nav__item-row .dropdown-caret { padding: 0.5em; }
   .mobile-submenu {
     list-style: none;
     margin: 0;

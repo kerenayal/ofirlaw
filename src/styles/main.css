@@ -336,13 +336,16 @@ textarea:focus-visible,
 }
 .icon-toggle:hover { border-color: var(--color-gold); }
 
-.icon-toggle__moon { display: none; }
+/* Icon shows the theme you'll SWITCH TO (matches the button's aria-label),
+   not the current theme: moon = "go dark" (shown in light mode),
+   sun = "go light" (shown in dark mode). */
+.icon-toggle__sun { display: none; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .icon-toggle__sun { display: none; }
-  :root:not([data-theme="light"]) .icon-toggle__moon { display: inline; }
+  :root:not([data-theme="light"]) .icon-toggle__moon { display: none; }
+  :root:not([data-theme="light"]) .icon-toggle__sun { display: inline; }
 }
-:root[data-theme="dark"] .icon-toggle__sun { display: none; }
-:root[data-theme="dark"] .icon-toggle__moon { display: inline; }
+:root[data-theme="dark"] .icon-toggle__moon { display: none; }
+:root[data-theme="dark"] .icon-toggle__sun { display: inline; }
 
 .lang-switch {
   display: inline-flex;
@@ -371,7 +374,12 @@ textarea:focus-visible,
 .mobile-nav.is-open { display: flex; }
 
 @media (max-width: 900px) {
-  .main-nav__list { display: none; }
+  .main-nav { display: none; }
+  .header-controls .btn--primary {
+    padding: 0.55em 0.9em;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
   .hamburger {
     display: inline-flex;
     background: none;

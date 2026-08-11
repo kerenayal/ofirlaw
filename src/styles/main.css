@@ -625,7 +625,7 @@ textarea:focus-visible,
    ========================================================================== */
 .whatsapp-float {
   position: fixed;
-  inset-inline-end: var(--space-2);
+  inset-inline-start: var(--space-2);
   bottom: var(--space-2);
   z-index: 150;
   background: #25d366;
@@ -642,7 +642,7 @@ textarea:focus-visible,
 /* ==========================================================================
    Accessibility widget
    ========================================================================== */
-.a11y-widget { position: fixed; inset-inline-start: var(--space-2); bottom: var(--space-2); z-index: 160; }
+.a11y-widget { position: fixed; inset-inline-end: var(--space-2); bottom: var(--space-2); z-index: 160; }
 .a11y-widget__toggle {
   width: 3.2rem; height: 3.2rem;
   border-radius: 50%;
@@ -656,7 +656,7 @@ textarea:focus-visible,
 .a11y-widget__panel {
   position: absolute;
   bottom: calc(3.2rem + 0.75rem);
-  inset-inline-start: 0;
+  inset-inline-end: 0;
   width: 280px;
   background: var(--color-bg-elevated);
   border: 1px solid var(--color-border);

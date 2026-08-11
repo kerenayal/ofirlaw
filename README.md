@@ -52,7 +52,5 @@ npm run build    # production build to _site/
 
 ## Roadmap
 
-Requested but intentionally not yet implemented:
-
-- **Icons for contact details** — add icons next to phone, mobile, fax, and email in the footer and on the Contact page (currently text-only with labels).
-- **Map on the Contact page** — embed a map showing the office address (Moshe Aviv Tower, Ramat Gan). Needs a decision on approach: a lightweight static map image (no third-party script, simplest, but not interactive) vs. an embedded Google Maps iframe (interactive, but pulls in a third-party service — would also need a mention in the privacy policy's "automatically collected information" section, similar to the existing Google Fonts note).
+- [x] **Icons for contact details** — done. Small inline SVGs (`src/_includes/partials/icons.njk`) next to phone, mobile, fax, and email in the footer and on the Contact page.
+- [ ] **Map on the Contact page** — embed a map showing the office address (Moshe Aviv Tower, Ramat Gan). Needs a decision on approach: a lightweight static map image (no third-party script, simplest, but not interactive) vs. an embedded Google Maps iframe (interactive, but pulls in a third-party service — would also need a mention in the privacy policy's "automatically collected information" section, similar to the existing Google Fonts note).

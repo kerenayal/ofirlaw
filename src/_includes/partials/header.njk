@@ -1,4 +1,5 @@
 {% set s = strings[lang] %}
+{% from "partials/icons.njk" import usaFlag, ukFlag, israelFlag %}
 <a class="skip-link" href="#main-content">{{ s.skipToContent }}</a>
 <header class="site-header">
   <div class="container site-header__inner">
@@ -27,7 +28,13 @@
 
     <div class="header-controls">
       <a class="btn btn--primary" href="{{ '/contact/' | localize(lang) | url }}">{{ s.cta.headerButton }}</a>
-      <a class="lang-switch" href="{{ altHref | url }}" hreflang="{{ s.otherLangCode }}" lang="{{ s.otherLangCode }}">{{ s.otherLangLabel }}</a>
+      <a class="lang-switch" href="{{ altHref | url }}" hreflang="{{ s.otherLangCode }}" lang="{{ s.otherLangCode }}" aria-label="{{ s.otherLangLabel }}">
+        {% if s.otherLangCode == 'en' %}
+          {{ usaFlag() }}<span class="lang-switch__sep" aria-hidden="true">/</span>{{ ukFlag() }}
+        {% else %}
+          {{ israelFlag() }}
+        {% endif %}
+      </a>
       <button type="button" class="icon-toggle" data-theme-toggle data-label-to-light="{{ s.theme.toggleToLight }}" data-label-to-dark="{{ s.theme.toggleToDark }}" aria-label="{{ s.theme.toggleToDark }}">
         <span class="icon-toggle__sun" aria-hidden="true">&#9788;</span>
         <span class="icon-toggle__moon" aria-hidden="true">&#9790;</span>
@@ -52,7 +59,7 @@
       <div class="mobile-nav__item-row">
         <a href="{{ '/practice-areas/' | localize(lang) | url }}">{{ s.nav.practiceAreas }}</a>
         <button type="button" class="dropdown-caret" data-dropdown-toggle aria-expanded="false" aria-controls="mobile-practice-areas-menu" aria-haspopup="true" aria-label="{{ s.nav.practiceAreas }}">
-          <span aria-hidden="true">&#9662;</span>
+          <span class="dropdown-caret__arrow" aria-hidden="true"></span>
         </button>
       </div>
       <ul class="mobile-submenu" id="mobile-practice-areas-menu" data-dropdown-menu>

@@ -11,6 +11,8 @@
   "whatsapp": "972547822357",
   "address_he": "מגדל משה אביב, ז'בוטינסקי 7, קומה 34, רמת-גן",
   "address_en": "Moshe Aviv Tower, 7 Jabotinsky St., 34th Floor, Ramat Gan, Israel",
+  "mapQuery_he": "ז'בוטינסקי 7, רמת גן",
+  "mapQuery_en": "7 Jabotinsky St, Ramat Gan, Israel",
   "ogImage": "/assets/images/og-image-placeholder.svg",
   "portraitLarge": "/assets/images/OfirLawMain.jpeg",
   "portraitSmall": "/assets/images/portrait-placeholder-small.svg",

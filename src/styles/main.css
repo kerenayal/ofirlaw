@@ -375,11 +375,6 @@ textarea:focus-visible,
 
 @media (max-width: 900px) {
   .main-nav { display: none; }
-  .header-controls .btn--primary {
-    padding: 0.55em 0.9em;
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
   .hamburger {
     display: inline-flex;
     background: none;
@@ -414,6 +409,16 @@ textarea:focus-visible,
     font-size: 1rem;
   }
   .mobile-submenu.is-open { display: flex; }
+}
+
+/* Below ~520px, brand + lang-switch + theme-toggle + hamburger alone
+   are already tight; the header CTA is dropped here since it's
+   redundant with the identical CTA at the bottom of the mobile-nav
+   overlay. (Measured on a real 375px-wide device via viewport
+   emulation — a resized desktop browser window can under-report this,
+   since it may not go narrow enough to reproduce it.) */
+@media (max-width: 520px) {
+  .header-controls .btn--primary { display: none; }
 }
 
 /* ==========================================================================

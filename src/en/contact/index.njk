@@ -6,6 +6,7 @@ altHref: /contact/
 title: "Contact | Ofir Omer, Adv."
 description: "A complex legal matter first requires a precise understanding of the full picture. Leave your details and we will be in touch to review your options."
 ---
+{% from "partials/icons.njk" import phoneIcon, mobileIcon, faxIcon, emailIcon %}
 <section class="page-header container">
   <span class="eyebrow">Contact</span>
   <h1>Let's Talk</h1>
@@ -49,10 +50,10 @@ description: "A complex legal matter first requires a precise understanding of t
     <div class="prose">
       <h2>{{ site.lawyerName_en }}</h2>
       <p>{{ site.address_en }}</p>
-      <p>{{ strings.en.contactLabels.phone }}: <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></p>
-      <p>{{ strings.en.contactLabels.mobile }}: <a href="tel:{{ site.mobileHref }}">{{ site.mobile }}</a></p>
-      <p>{{ strings.en.contactLabels.fax }}: {{ site.fax }}</p>
-      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p class="contact-line">{{ phoneIcon() }}{{ strings.en.contactLabels.phone }}: <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a></p>
+      <p class="contact-line">{{ mobileIcon() }}{{ strings.en.contactLabels.mobile }}: <a href="tel:{{ site.mobileHref }}">{{ site.mobile }}</a></p>
+      <p class="contact-line">{{ faxIcon() }}{{ strings.en.contactLabels.fax }}: {{ site.fax }}</p>
+      <p class="contact-line">{{ emailIcon() }}<a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
     </div>
   </div>
 </section>

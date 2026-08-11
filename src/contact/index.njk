@@ -6,6 +6,7 @@ altHref: /en/contact/
 title: "צור קשר | עו\"ד אופיר עומר"
 description: "סוגיה משפטית מורכבת דורשת בראש ובראשונה הבנה מדויקת של התמונה. השאירו פרטים וניצור קשר לבחינת האפשרויות העומדות בפניכם."
 ---
+{% from "partials/icons.njk" import phoneIcon, mobileIcon, faxIcon, emailIcon %}
 <section class="page-header container">
   <span class="eyebrow">צור קשר</span>
   <h1>בואו נדבר</h1>
@@ -49,10 +50,10 @@ description: "סוגיה משפטית מורכבת דורשת בראש וברא�
     <div class="prose">
       <h2>{{ site.lawyerName_he }}</h2>
       <p>{{ site.address_he }}</p>
-      <p>{{ strings.he.contactLabels.phone }}: <a href="tel:{{ site.phoneHref }}"><bdi dir="ltr">{{ site.phone }}</bdi></a></p>
-      <p>{{ strings.he.contactLabels.mobile }}: <a href="tel:{{ site.mobileHref }}"><bdi dir="ltr">{{ site.mobile }}</bdi></a></p>
-      <p>{{ strings.he.contactLabels.fax }}: <bdi dir="ltr">{{ site.fax }}</bdi></p>
-      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p class="contact-line">{{ phoneIcon() }}{{ strings.he.contactLabels.phone }}: <a href="tel:{{ site.phoneHref }}"><bdi dir="ltr">{{ site.phone }}</bdi></a></p>
+      <p class="contact-line">{{ mobileIcon() }}{{ strings.he.contactLabels.mobile }}: <a href="tel:{{ site.mobileHref }}"><bdi dir="ltr">{{ site.mobile }}</bdi></a></p>
+      <p class="contact-line">{{ faxIcon() }}{{ strings.he.contactLabels.fax }}: <bdi dir="ltr">{{ site.fax }}</bdi></p>
+      <p class="contact-line">{{ emailIcon() }}<a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
     </div>
   </div>
 </section>

@@ -625,8 +625,8 @@ textarea:focus-visible,
    ========================================================================== */
 .whatsapp-float {
   position: fixed;
-  inset-inline-start: var(--space-2);
-  bottom: var(--space-2);
+  inset-inline-end: var(--space-2);
+  bottom: calc(var(--space-2) + 3.2rem + 0.75rem);
   z-index: 150;
   background: #25d366;
   color: #fff;

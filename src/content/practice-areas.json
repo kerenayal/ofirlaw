@@ -40,14 +40,14 @@
     "body_en": "Drafting, review, and negotiation of commercial agreements."
   },
   {
-    "slug": "landlord-tenant-disputes",
+    "slug": "labor-law",
     "order": 5,
-    "title_he": "סכסוכים בין בעלי נכסים ושוכרים",
-    "title_en": "Landlord-Tenant Disputes",
-    "short_he": "ייצוג וייעוץ במחלוקות הנוגעות לזכויות וחובות הצדדים.",
-    "short_en": "Representation and counsel in disputes over the rights and obligations of the parties.",
-    "body_he": "ייצוג וייעוץ במחלוקות הנוגעות לזכויות וחובות הצדדים, הפרות הסכם, תשלומים, שימוש בנכס וסעדים.",
-    "body_en": "Representation and counsel in disputes concerning the rights and obligations of the parties, breach of agreement, payments, use of the property, and remedies."
+    "title_he": "דיני עבודה — ייצוג עובדים ומעסיקים",
+    "title_en": "Labor Law — Representing Employees and Employers",
+    "short_he": "ליווי משפטי וייצוג בסכסוכי עבודה, יחסי עבודה וזכויות עובדים ומעסיקים.",
+    "short_en": "Legal support and representation in labor disputes, employment relations, and the rights of employees and employers.",
+    "body_he": "ליווי משפטי וייצוג בסכסוכי עבודה מורכבים, לרבות יחסי עבודה, פיטורים, זכויות עובדים, חוזי העסקה, הליכי שימוע, תביעות הדדיות בין עובדים ומעסיקים, והיבטים מסחריים הנוגעים לניהול כוח אדם.\n\nהטיפול משלב הבנה רגישה של מערכת היחסים לצד ניתוח משפטי מדויק, במטרה להגיע לפתרון יעיל, מאוזן ומבוסס אמון.",
+    "body_en": "Legal support and representation in complex labor disputes, including employment relations, dismissals, employee rights, employment contracts, hearing procedures, mutual claims between employees and employers, and commercial aspects of workforce management.\n\nThe handling combines a sensitive understanding of the relationship alongside precise legal analysis, aiming to reach an efficient, balanced, and trust-based solution."
   },
   {
     "slug": "management-companies-commercial-centers",

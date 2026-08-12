@@ -19,7 +19,7 @@ eleventyComputed:
 
 <section class="section">
   <div class="container prose">
-    <p>{{ area.body_he }}</p>
+    {{ area.body_he | paragraphs | safe }}
     <a class="card__link" href="{{ '/practice-areas/' | url }}">{{ strings.he.cta.backToPracticeAreas }}</a>
   </div>
 </section>

@@ -20,6 +20,20 @@ eleventyComputed:
 <section class="section">
   <div class="container prose">
     {{ area.body_he | paragraphs | safe }}
+    {% for section in area.sections %}
+    <h2>{{ section.title_he }}</h2>
+    {{ section.body_he | paragraphs | safe }}
+    {% if section.list_he %}
+    <ul>
+      {% for item in section.list_he %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if section.body_after_he %}
+    {{ section.body_after_he | paragraphs | safe }}
+    {% endif %}
+    {% endfor %}
     <a class="card__link" href="{{ '/practice-areas/' | url }}">{{ strings.he.cta.backToPracticeAreas }}</a>
   </div>
 </section>

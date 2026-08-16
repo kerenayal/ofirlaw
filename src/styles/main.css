@@ -483,10 +483,6 @@ textarea:focus-visible,
   margin-bottom: var(--space-1);
   align-self: start;
 }
-.case-card dl { margin: 0; display: grid; gap: 0.6em; }
-.case-card dt { font-family: var(--font-heading); font-size: 0.85rem; color: var(--color-text); }
-.case-card dd { margin: 0; }
-
 .case-filters { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-bottom: var(--space-4); }
 .case-filters button {
   background: none;

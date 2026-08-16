@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+lang: en
+navKey: cases
+pagination:
+  data: cases
+  size: 1
+  alias: item
+permalink: "/en/cases/{{ item.slug }}/"
+eleventyComputed:
+  title: "{{ item.title_en }} | Ofir Omer, Adv."
+  description: "{{ item.summary_en }}"
+  altHref: "/cases/{{ item.slug }}/"
+---
+<section class="page-header container">
+  <span class="eyebrow">{{ item.field_en }}</span>
+  <h1>{{ item.title_en }}</h1>
+</section>
+
+<section class="section">
+  <div class="container prose">
+    {{ item.content_en | paragraphs | safe }}
+    <p><a class="card__link" href="{{ '/en/cases/' | url }}">{{ strings.en.cta.backToCases }}</a></p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container inline-cta">
+    <p>{{ strings.en.cta.inlineCta }}</p>
+    <a class="btn btn--primary" href="{{ '/en/contact/' | url }}">Contact Us</a>
+  </div>
+</section>

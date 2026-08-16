@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+lang: he
+navKey: cases
+pagination:
+  data: cases
+  size: 1
+  alias: item
+permalink: "/cases/{{ item.slug }}/"
+eleventyComputed:
+  title: "{{ item.title_he }} | אופיר עומר, עורכי דין"
+  description: "{{ item.summary_he }}"
+  altHref: "/en/cases/{{ item.slug }}/"
+---
+<section class="page-header container">
+  <span class="eyebrow">{{ item.field_he }}</span>
+  <h1>{{ item.title_he }}</h1>
+</section>
+
+<section class="section">
+  <div class="container prose">
+    {{ item.content_he | paragraphs | safe }}
+    <p><a class="card__link" href="{{ '/cases/' | url }}">{{ strings.he.cta.backToCases }}</a></p>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container inline-cta">
+    <p>{{ strings.he.cta.inlineCta }}</p>
+    <a class="btn btn--primary" href="{{ '/contact/' | url }}">צרו קשר</a>
+  </div>
+</section>

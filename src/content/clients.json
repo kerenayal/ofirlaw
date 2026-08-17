@@ -1,1 +1,9 @@
-[]
+[
+  { "name": "Tamnoon", "logoUrl": "/assets/images/clients/tamnoon.svg", "website": "https://tamnoon.com/" },
+  { "name": "Dizengof Center", "logoUrl": "/assets/images/clients/dizengof-center.svg", "website": "https://www.dizengof-center.co.il/" },
+  { "name": "Scoop Shoes", "logoUrl": "/assets/images/clients/scoop-shoes.jpg", "website": "https://www.scoopshoes.co.il/" },
+  { "name": "Minigood", "logoUrl": "/assets/images/clients/minigood.jpg", "website": "https://www.instagram.com/minigood_israel/" },
+  { "name": "Sigma City", "logoUrl": "/assets/images/clients/sigmacity.png", "website": "https://sigmacity.co.il/" },
+  { "name": "Envy", "logoUrl": "/assets/images/clients/envy.svg", "website": "https://goenvy.io/" },
+  { "name": "Newmark Israel", "logoUrl": "/assets/images/clients/newmark.svg", "website": "https://www.nmrk.co.il/" }
+]

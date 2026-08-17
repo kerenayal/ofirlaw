@@ -21,7 +21,6 @@
         </li>
         <li><a href="{{ '/cases/' | localize(lang) | url }}" {% if navKey == 'cases' %}aria-current="page"{% endif %}>{{ s.nav.cases }}</a></li>
         <li><a href="{{ '/clients/' | localize(lang) | url }}" {% if navKey == 'clients' %}aria-current="page"{% endif %}>{{ s.nav.clients }}</a></li>
-        <li><a href="{{ '/articles/' | localize(lang) | url }}" {% if navKey == 'articles' %}aria-current="page"{% endif %}>{{ s.nav.articles }}</a></li>
         <li><a href="{{ '/contact/' | localize(lang) | url }}" {% if navKey == 'contact' %}aria-current="page"{% endif %}>{{ s.nav.contact }}</a></li>
       </ul>
     </nav>
@@ -70,7 +69,6 @@
     </li>
     <li><a href="{{ '/cases/' | localize(lang) | url }}">{{ s.nav.cases }}</a></li>
     <li><a href="{{ '/clients/' | localize(lang) | url }}">{{ s.nav.clients }}</a></li>
-    <li><a href="{{ '/articles/' | localize(lang) | url }}">{{ s.nav.articles }}</a></li>
     <li><a href="{{ '/contact/' | localize(lang) | url }}">{{ s.nav.contact }}</a></li>
   </ul>
   <a class="btn btn--primary" style="margin-top:2rem" href="{{ '/contact/' | localize(lang) | url }}">{{ s.cta.headerButton }}</a>

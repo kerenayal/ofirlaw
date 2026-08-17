@@ -16,7 +16,19 @@ description: "The firm represents companies, property owners, management compani
     {% if clients and clients.length > 0 %}
     <ul class="clients-list">
       {% for client in clients %}
-      <li>{{ client.name }}</li>
+      <li class="clients-list__item">
+        {% if client.logoUrl %}
+          {% if client.website %}
+          <a href="{{ client.website }}" target="_blank" rel="noopener" aria-label="{{ client.name }}">
+            <img src="{{ client.logoUrl | url }}" alt="{{ client.name }}" loading="lazy">
+          </a>
+          {% else %}
+          <img src="{{ client.logoUrl | url }}" alt="{{ client.name }}" loading="lazy">
+          {% endif %}
+        {% else %}
+        <span class="clients-list__name">{{ client.name }}</span>
+        {% endif %}
+      </li>
       {% endfor %}
     </ul>
     {% else %}

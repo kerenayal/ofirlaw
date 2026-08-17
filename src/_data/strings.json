@@ -11,7 +11,6 @@
       "practiceAreas": "תחומי עיסוק",
       "cases": "תיקים נבחרים",
       "clients": "לקוחות",
-      "articles": "מאמרים",
       "contact": "צור קשר"
     },
     "cta": {
@@ -19,7 +18,6 @@
       "contact": "צרו קשר",
       "practiceAreas": "תחומי עיסוק",
       "readMore": "קראו עוד",
-      "backToArticles": "חזרה למאמרים ותובנות",
       "backToPracticeAreas": "חזרה לתחומי עיסוק",
       "backToCases": "חזרה לתיקים נבחרים",
       "inlineCta": "מעוניינים להתייעץ? צרו קשר"
@@ -82,7 +80,6 @@
       "practiceAreas": "Practice Areas",
       "cases": "Selected Cases",
       "clients": "Clients",
-      "articles": "Articles & Insights",
       "contact": "Contact"
     },
     "cta": {
@@ -90,7 +87,6 @@
       "contact": "Contact Us",
       "practiceAreas": "Practice Areas",
       "readMore": "Read More",
-      "backToArticles": "Back to Articles & Insights",
       "backToPracticeAreas": "Back to Practice Areas",
       "backToCases": "Back to Selected Cases",
       "inlineCta": "Interested in a consultation? Get in touch."

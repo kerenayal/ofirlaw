@@ -463,7 +463,7 @@ textarea:focus-visible,
 }
 
 /* ==========================================================================
-   Cards (practice areas / cases / articles / clients)
+   Cards (practice areas / cases / clients)
    ========================================================================== */
 .grid {
   display: grid;
@@ -514,17 +514,52 @@ textarea:focus-visible,
 .case-filters button.is-active,
 .case-filters button:hover { border-color: var(--color-gold); color: var(--color-gold-strong); }
 
-.article-card time { font-size: 0.82rem; color: var(--color-gold-strong); }
-
 .clients-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-3);
 }
-.clients-list li {
+@media (max-width: 860px) {
+  .clients-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .clients-list { grid-template-columns: 1fr; }
+}
+.clients-list__item {
   border: 1px solid var(--color-border);
-  padding: var(--space-2) var(--space-3);
+  background: #ffffff;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+  transition: border-color var(--transition);
+}
+.clients-list__item:hover { border-color: var(--color-gold); }
+.clients-list__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.clients-list__item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.7;
+  transition: filter var(--transition), opacity var(--transition);
+}
+.clients-list__item:hover img,
+.clients-list__item img:focus-visible {
+  filter: grayscale(0);
+  opacity: 1;
+}
+.clients-list__name {
   font-family: var(--font-heading);
+  color: #141414;
+  text-align: center;
 }
 .clients-fallback {
   border: 1px solid var(--color-border);

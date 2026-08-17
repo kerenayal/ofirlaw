@@ -2,7 +2,7 @@
 
 Bilingual (Hebrew/English) marketing website for Adv. Ofir Omer, built with [Eleventy](https://www.11ty.dev/), deployed to GitHub Pages, custom domain registered with GoDaddy.
 
-For editing content (cases, articles, clients, contact details) without touching code, see **[CONTENT-GUIDE.md](./CONTENT-GUIDE.md)**.
+For editing content (cases, clients, contact details) without touching code, see **[CONTENT-GUIDE.md](./CONTENT-GUIDE.md)**.
 
 ## Local development
 
@@ -16,7 +16,7 @@ npm run build    # production build to _site/
 
 - `src/` — Hebrew pages live at the root (`/`, `/about/`, ...); English mirrors live under `src/en/`.
 - `src/_data/` — site-wide constants (`site.json`) and UI copy (`strings.json`).
-- `src/content/` — editable content: practice areas, cases, articles, clients.
+- `src/content/` — editable content: practice areas, cases, clients.
 - `src/_includes/` — shared layout and partials (header, footer, accessibility widget).
 - `src/styles/main.css` — design tokens (light/dark theme, RTL/LTR via CSS logical properties).
 - `src/scripts/` — theme toggle, mobile nav, case filters, accessibility widget, contact form.
@@ -47,7 +47,7 @@ npm run build    # production build to _site/
 
 - `src/_data/site.json` — WhatsApp number (phone/mobile/fax/email/address are already filled in), real domain URL, accessibility coordinator details.
 - `src/assets/images/` — portrait photo is in place; still need a JPG/PNG Open Graph share image (1200×630) to replace `og-image-placeholder.svg`.
-- `src/content/cases/*.json` and `src/content/articles/*.json` — currently template entries with `[להשלמה]` placeholders; fill in with real case summaries and articles as they're approved for publication (see CONTENT-GUIDE.md).
+- `src/content/cases/*.json` — add real case summaries as they're approved for publication (see CONTENT-GUIDE.md).
 - `src/content/clients.json` — currently empty; only add client names/logos that are cleared for public use.
 
 ## Roadmap

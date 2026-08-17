@@ -30,34 +30,6 @@
 
 ---
 
-## הוספת/עריכת מאמר
-
-תיקייה: `src/content/articles/`
-
-כל מאמר הוא קובץ JSON נפרד. יוצרים קובץ חדש (למשל `2026-02-tenant-disputes.json`) עם המבנה הבא:
-
-```json
-{
-  "slug": "tenant-disputes-2026",
-  "category": "real-estate",
-  "categoryLabel_he": "מקרקעין",
-  "categoryLabel_en": "Real Estate",
-  "date": "2026-02-15",
-  "title_he": "כותרת המאמר בעברית",
-  "title_en": "Article title in English",
-  "summary_he": "תקציר קצר בעברית",
-  "summary_en": "Short summary in English",
-  "content_he": "פסקה ראשונה בעברית.\n\nפסקה שנייה בעברית.",
-  "content_en": "First paragraph in English.\n\nSecond paragraph in English."
-}
-```
-
-- `slug` קובע את כתובת ה-URL של המאמר (`/articles/<slug>/`) — יש להשתמש רק באותיות אנגליות, מספרים ומקפים.
-- `date` בפורמט `YYYY-MM-DD`.
-- להפרדה בין פסקאות בתוך `content_he`/`content_en`, יש להשאיר שורה ריקה בין הפסקאות (`\n\n`).
-
----
-
 ## עדכון רשימת לקוחות
 
 קובץ: `src/content/clients.json`

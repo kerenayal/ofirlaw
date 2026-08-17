@@ -421,6 +421,24 @@ textarea:focus-visible,
   .header-controls .btn--primary { display: none; }
 }
 
+/* Below ~420px, even without the CTA the brand name + icon/flag/hamburger
+   cluster can outgrow the available width and force the whole page's
+   layout viewport to widen (requiring pinch-zoom to see the full page) —
+   confirmed via viewport emulation down to 350px, matching real narrow
+   Android devices with increased display-scale settings. Tighten spacing
+   and cap the brand text with an ellipsis as a hard backstop so no
+   combination of font/content on any device can reintroduce the overflow. */
+@media (max-width: 420px) {
+  .container { padding-inline: var(--space-2); }
+  .header-controls { gap: var(--space-1); }
+  .brand {
+    font-size: 1rem;
+    max-width: 40vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 /* ==========================================================================
    Hero
    ========================================================================== */

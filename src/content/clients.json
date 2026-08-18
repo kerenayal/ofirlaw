@@ -5,5 +5,6 @@
   { "name": "Minigood", "logoUrl": "/assets/images/clients/minigood.jpg", "website": "https://www.instagram.com/minigood_israel/" },
   { "name": "Sigma City", "logoUrl": "/assets/images/clients/sigmacity.png", "website": "https://sigmacity.co.il/" },
   { "name": "Envy", "logoUrl": "/assets/images/clients/envy.svg", "website": "https://goenvy.io/" },
-  { "name": "Newmark Israel", "logoUrl": "/assets/images/clients/newmark.svg", "website": "https://www.nmrk.co.il/" }
+  { "name": "Newmark Israel", "logoUrl": "/assets/images/clients/newmark.svg", "website": "https://www.nmrk.co.il/" },
+  { "name": "Kookint", "logoUrl": "/assets/images/clients/kookint.png", "website": "https://kookint.com/" }
 ]

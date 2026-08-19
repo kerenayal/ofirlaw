@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+lang: en
+navKey: disclaimer
+altHref: /disclaimer/
+title: "Disclaimer | Ofir Omer, Adv."
+description: "The disclaimer for the Ofir Omer, Adv. website."
+---
+<section class="page-header container">
+  <span class="eyebrow">Disclaimer</span>
+  <h1>{{ strings.en.footer.disclaimerTitle }}</h1>
+</section>
+
+<section class="section prose container">
+  {{ strings.en.footer.disclaimerText | paragraphs | safe }}
+</section>

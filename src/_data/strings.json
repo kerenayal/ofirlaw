@@ -23,8 +23,9 @@
       "inlineCta": "מעוניינים להתייעץ? צרו קשר"
     },
     "footer": {
-      "tagline": "ייעוץ משפטי וליטיגציה אזרחית-מסחרית",
+      "tagline": "ליטיגציה אזרחית ומסחרית | מקרקעין\nחברות ועסקים | חוזים",
       "rights": "כל הזכויות שמורות",
+      "builtBy": "בניית האתר",
       "accessibilityStatement": "הצהרת נגישות",
       "privacyPolicy": "מדיניות פרטיות",
       "disclaimerTitle": "כתב ויתור",
@@ -92,8 +93,9 @@
       "inlineCta": "Interested in a consultation? Get in touch."
     },
     "footer": {
-      "tagline": "Legal Counsel & Civil-Commercial Litigation",
+      "tagline": "Civil & Commercial Litigation | Real Estate\nCompanies & Business | Contracts",
       "rights": "All rights reserved",
+      "builtBy": "Site built by",
       "accessibilityStatement": "Accessibility Statement",
       "privacyPolicy": "Privacy Policy",
       "disclaimerTitle": "Disclaimer",

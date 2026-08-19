@@ -6,11 +6,14 @@ altHref: /
 title: "Ofir Omer, Adv. | Litigation, Commercial Law & Real Estate"
 description: "Ofir Omer, Adv. — legal counsel and representation in civil-commercial litigation, real estate, contracts, corporate matters, and property management. Personal, professional, and strategic representation."
 ---
+{% from "partials/icons.njk" import phoneIcon, mobileIcon, emailIcon, whatsappIcon %}
 <section class="container hero">
   <div class="hero__content">
     <span class="eyebrow">Ofir Omer, Adv.</span>
     <h1>Law. Strategy. Results.</h1>
-    <p>A boutique firm specializing in legal counsel, civil-commercial litigation, and representation of companies, business owners, and private clients in complex legal matters.</p>
+    <p>Legal representation and support for situations that call for thinking several steps ahead.</p>
+    <p>Ofir Omer, Adv. provides counsel, support, and representation to companies, business owners, and private clients in the fields of civil-commercial litigation, real estate, contracts, and business activity.</p>
+    <p>Every case begins with a thorough understanding of the legal and business situation, and continues with building a strategy tailored to the client's goal.</p>
     <div class="hero__actions">
       <a class="btn btn--primary" href="{{ '/en/contact/' | url }}">Contact Us</a>
       <a class="btn btn--ghost" href="{{ '/en/practice-areas/' | url }}">Practice Areas</a>
@@ -22,18 +25,39 @@ description: "Ofir Omer, Adv. — legal counsel and representation in civil-comm
 </section>
 
 <section class="section section--alt">
-  <div class="container two-col">
-    <div>
-      <span class="eyebrow">Experience & Expertise</span>
-      <h2>Legal knowledge paired with business thinking</h2>
-      <p>The firm advises companies, business owners, and private clients on complex legal matters, combining precise legal understanding with strategic thinking tailored to each client's goals.</p>
-      <a class="card__link" href="{{ '/en/about/' | url }}">About Ofir Omer, Adv.</a>
+  <div class="container">
+    <div class="section-intro">
+      <h2>When a legal solution is needed — you have to see the full picture</h2>
     </div>
-    <div>
-      <span class="eyebrow">Professional Approach</span>
-      <h2>Personal involvement in every case</h2>
-      <p>Every case receives personal, direct attention from the attorney himself — availability, discretion, and attentiveness throughout the entire process.</p>
-      <a class="card__link" href="{{ '/en/contact/' | url }}">Schedule a Consultation</a>
+    <div class="quad-col">
+      <div>
+        <span class="eyebrow">Professional Background</span>
+        <h3>Legal Experience</h3>
+        <p>Accumulated experience representing and supporting companies, business owners, and private clients across a wide range of disputes and legal proceedings.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Working Method</span>
+        <h3>Strategic Thinking</h3>
+        <p>The legal solution doesn't always start in court. I examine the full range of options, risks, and objectives — and build the course of action suited to the case.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Every Step of the Way</span>
+        <h3>Personal Involvement</h3>
+        <p>The client doesn't get passed between different people. The legal handling is carried out with my personal, direct involvement, from the first stage through to completion.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Business Angle</span>
+        <h3>Business Understanding</h3>
+        <p>When representing companies and business owners, the legal decision must also take into account the business reality, the costs, the risks, and the goal for which the advice is being sought.</p>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <a class="card__link" href="{{ '/en/about/' | url }}">About Ofir Omer, Adv.</a>
+      </div>
+      <div>
+        <a class="card__link" href="{{ '/en/contact/' | url }}">Schedule a Consultation</a>
+      </div>
     </div>
   </div>
 </section>
@@ -73,8 +97,21 @@ description: "Ofir Omer, Adv. — legal counsel and representation in civil-comm
 </section>
 
 <section class="section section--alt">
-  <div class="container inline-cta">
-    <p>{{ strings.en.cta.inlineCta }}</p>
+  <div class="container cta-expanded">
+    <div class="cta-expanded__text">
+      <h2>Have a Legal Issue?</h2>
+      <p>Sometimes one timely conversation can change the way a case unfolds.</p>
+      <p>If you're dealing with a dispute, a contract, a business conflict, or another legal matter — you're welcome to reach out to the firm to review your case.</p>
+      <p>In the initial conversation, we'll examine the factual picture, the legal options, and the right way forward.</p>
+      <ul class="cta-expanded__contacts">
+        <li class="contact-line">{{ phoneIcon() }}<a href="tel:{{ site.phoneHref }}"><bdi dir="ltr">{{ site.phone }}</bdi></a></li>
+        <li class="contact-line">{{ mobileIcon() }}<a href="tel:{{ site.mobileHref }}"><bdi dir="ltr">{{ site.mobile }}</bdi></a></li>
+        <li class="contact-line">{{ emailIcon() }}<a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        {% if site.whatsapp %}
+        <li class="contact-line">{{ whatsappIcon() }}<a href="https://wa.me/{{ site.whatsapp }}?text={{ strings.en.whatsappMessage | urlencode }}" target="_blank" rel="noopener">{{ strings.en.whatsappLabel }}</a></li>
+        {% endif %}
+      </ul>
+    </div>
     <a class="btn btn--primary" href="{{ '/en/contact/' | url }}">Contact Us</a>
   </div>
 </section>

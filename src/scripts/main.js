@@ -109,6 +109,22 @@
     updateThemeToggleLabel(document.documentElement.getAttribute("data-theme") || "light");
   }
 
+  /* Hide the floating WhatsApp + accessibility buttons while the footer's
+     bottom row is in view, so they never sit on top of the copyright,
+     legal links, or credit line. */
+  var floatingButtons = document.querySelectorAll(".whatsapp-float, .a11y-widget");
+  var footerBottom = document.querySelector(".site-footer__bottom");
+  if (floatingButtons.length && footerBottom && "IntersectionObserver" in window) {
+    var footerObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        floatingButtons.forEach(function (btn) {
+          btn.classList.toggle("is-hidden", entry.isIntersecting);
+        });
+      });
+    });
+    footerObserver.observe(footerBottom);
+  }
+
   /* Contact form -> mailto (no backend configured yet) */
   var contactForm = document.querySelector("[data-contact-form]");
   if (contactForm) {

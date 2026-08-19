@@ -4,7 +4,7 @@
   <div class="container site-footer__grid">
     <div>
       <p class="brand" style="color:var(--color-text)">{{ site.lawyerName_he if lang == 'he' else site.lawyerName_en }}</p>
-      <p>{{ s.footer.tagline }}</p>
+      <p class="footer-tagline">{{ s.footer.tagline }}</p>
     </div>
     <div>
       <h3 style="font-size:1rem">{{ s.nav.home }}</h3>
@@ -27,19 +27,13 @@
       </ul>
     </div>
   </div>
-  <div class="container">
-    <details class="disclaimer">
-      <summary>{{ s.footer.disclaimerTitle }}</summary>
-      <div class="disclaimer__body prose">
-        {{ s.footer.disclaimerText | paragraphs | safe }}
-      </div>
-    </details>
-  </div>
   <div class="container site-footer__bottom">
     <span><bdi dir="ltr">&copy; {{ currentYear }} {{ site.lawyerName_en }}</bdi> &mdash; {{ s.footer.rights }}.</span>
     <span class="site-footer__legal-links">
+      <a href="{{ '/disclaimer/' | localize(lang) | url }}">{{ s.footer.disclaimerTitle }}</a>
       <a href="{{ '/accessibility/' | localize(lang) | url }}">{{ s.footer.accessibilityStatement }}</a>
       <a href="{{ '/privacy-policy/' | localize(lang) | url }}">{{ s.footer.privacyPolicy }}</a>
     </span>
+    <span class="site-footer__credit">{{ s.footer.builtBy }} <a href="https://akbuilt.dev/" target="_blank" rel="noopener">AK Built</a></span>
   </div>
 </footer>

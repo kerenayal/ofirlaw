@@ -6,11 +6,14 @@ altHref: /en/
 title: "אופיר עומר, עורכי דין | ליטיגציה, משפט מסחרי ומקרקעין"
 description: "אופיר עומר, עורכי דין – ייעוץ משפטי וייצוג בליטיגציה אזרחית-מסחרית, מקרקעין, חוזים, חברות וניהול נכסים. ייצוג אישי, מקצועי ואסטרטגי."
 ---
+{% from "partials/icons.njk" import phoneIcon, mobileIcon, emailIcon, whatsappIcon %}
 <section class="container hero">
   <div class="hero__content">
     <span class="eyebrow">אופיר עומר, עורכי דין</span>
     <h1>משפט. אסטרטגיה. תוצאה.</h1>
-    <p>משרד בוטיק המתמחה בייעוץ משפטי, ליטיגציה אזרחית-מסחרית וייצוג חברות, בעלי עסקים ולקוחות פרטיים במצבים משפטיים מורכבים.</p>
+    <p>ייצוג וליווי משפטי במצבים שבהם צריך לחשוב כמה צעדים קדימה.</p>
+    <p>אופיר עומר, עורכי דין, מעניק ייעוץ, ליווי וייצוג לחברות, בעלי עסקים ולקוחות פרטיים בתחומי הליטיגציה האזרחית והמסחרית, המקרקעין, החוזים והפעילות העסקית.</p>
+    <p>כל תיק מתחיל בהבנה מעמיקה של המצב המשפטי והעסקי, וממשיך בבניית אסטרטגיה המותאמת למטרה של הלקוח.</p>
     <div class="hero__actions">
       <a class="btn btn--primary" href="{{ '/contact/' | url }}">צרו קשר</a>
       <a class="btn btn--ghost" href="{{ '/practice-areas/' | url }}">תחומי עיסוק</a>
@@ -22,18 +25,39 @@ description: "אופיר עומר, עורכי דין – ייעוץ משפטי �
 </section>
 
 <section class="section section--alt">
-  <div class="container two-col">
-    <div>
-      <span class="eyebrow">ניסיון ומומחיות</span>
-      <h2>ידע משפטי לצד חשיבה עסקית</h2>
-      <p>המשרד מלווה חברות, בעלי עסקים ולקוחות פרטיים בסוגיות משפטיות מורכבות, תוך שילוב בין הבנה משפטית מדויקת לבין חשיבה אסטרטגית המותאמת למטרות הלקוח.</p>
-      <a class="card__link" href="{{ '/about/' | url }}">אודות אופיר עומר, עורכי דין</a>
+  <div class="container">
+    <div class="section-intro">
+      <h2>כשנדרש פתרון משפטי — צריך לראות את התמונה המלאה</h2>
     </div>
-    <div>
-      <span class="eyebrow">גישה מקצועית</span>
-      <h2>מעורבות אישית בכל תיק</h2>
-      <p>כל תיק מקבל טיפול אישי וישיר מעורך הדין עצמו — זמינות, דיסקרטיות ותשומת לב לפרטים לאורך כל ההליך.</p>
-      <a class="card__link" href="{{ '/contact/' | url }}">קביעת שיחת ייעוץ</a>
+    <div class="quad-col">
+      <div>
+        <span class="eyebrow">רקע מקצועי</span>
+        <h3>ניסיון משפטי</h3>
+        <p>ניסיון מצטבר בייצוג וליווי של חברות, בעלי עסקים ולקוחות פרטיים במגוון רחב של מחלוקות והליכים משפטיים.</p>
+      </div>
+      <div>
+        <span class="eyebrow">שיטת עבודה</span>
+        <h3>חשיבה אסטרטגית</h3>
+        <p>הפתרון המשפטי אינו תמיד מתחיל בבית המשפט. אני בוחן את מכלול האפשרויות, הסיכונים והיעדים — ובונה את דרך הפעולה המתאימה למקרה.</p>
+      </div>
+      <div>
+        <span class="eyebrow">לאורך כל הדרך</span>
+        <h3>מעורבות אישית</h3>
+        <p>הלקוח אינו עובר בין גורמים שונים. הטיפול המשפטי מתבצע במעורבות אישית וישירה שלי, מהשלב הראשון ועד לסיום הטיפול.</p>
+      </div>
+      <div>
+        <span class="eyebrow">זווית עסקית</span>
+        <h3>הבנה עסקית</h3>
+        <p>בייצוג חברות ובעלי עסקים, ההחלטה המשפטית צריכה להביא בחשבון גם את המציאות העסקית, את העלויות, את הסיכונים ואת המטרה שלשמה פונים לייעוץ.</p>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <a class="card__link" href="{{ '/about/' | url }}">אודות אופיר עומר, עורכי דין</a>
+      </div>
+      <div>
+        <a class="card__link" href="{{ '/contact/' | url }}">קביעת שיחת ייעוץ</a>
+      </div>
     </div>
   </div>
 </section>
@@ -73,8 +97,21 @@ description: "אופיר עומר, עורכי דין – ייעוץ משפטי �
 </section>
 
 <section class="section section--alt">
-  <div class="container inline-cta">
-    <p>{{ strings.he.cta.inlineCta }}</p>
+  <div class="container cta-expanded">
+    <div class="cta-expanded__text">
+      <h2>יש לכם סוגיה משפטית?</h2>
+      <p>לפעמים שיחה אחת בזמן יכולה לשנות את הדרך שבה מתנהל התיק.</p>
+      <p>אם אתם מתמודדים עם סכסוך, חוזה, מחלוקת עסקית או סוגיה משפטית אחרת — ניתן לפנות למשרד לצורך בחינת המקרה.</p>
+      <p>בשיחה הראשונית נבחן את התמונה העובדתית, את האפשרויות המשפטיות ואת הדרך הנכונה להתקדם.</p>
+      <ul class="cta-expanded__contacts">
+        <li class="contact-line">{{ phoneIcon() }}<a href="tel:{{ site.phoneHref }}"><bdi dir="ltr">{{ site.phone }}</bdi></a></li>
+        <li class="contact-line">{{ mobileIcon() }}<a href="tel:{{ site.mobileHref }}"><bdi dir="ltr">{{ site.mobile }}</bdi></a></li>
+        <li class="contact-line">{{ emailIcon() }}<a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        {% if site.whatsapp %}
+        <li class="contact-line">{{ whatsappIcon() }}<a href="https://wa.me/{{ site.whatsapp }}?text={{ strings.he.whatsappMessage | urlencode }}" target="_blank" rel="noopener">{{ strings.he.whatsappLabel }}</a></li>
+        {% endif %}
+      </ul>
+    </div>
     <a class="btn btn--primary" href="{{ '/contact/' | url }}">צרו קשר</a>
   </div>
 </section>

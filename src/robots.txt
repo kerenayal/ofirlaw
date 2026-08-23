@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example-domain-placeholder.co.il/sitemap.xml
+Sitemap: https://ofirlaw.co/sitemap.xml

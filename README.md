@@ -45,10 +45,9 @@ npm run build    # production build to _site/
 
 ## Known placeholders to fill in before launch
 
-- `src/_data/site.json` — WhatsApp number (phone/mobile/fax/email/address are already filled in), real domain URL, accessibility coordinator details.
+- `src/_data/site.json` — accessibility coordinator details still need to be filled in (name/phone/email/statement date/conformance level).
 - `src/assets/images/` — portrait photo is in place; still need a JPG/PNG Open Graph share image (1200×630) to replace `og-image-placeholder.svg`.
-- `src/content/cases/*.json` — add real case summaries as they're approved for publication (see CONTENT-GUIDE.md).
-- `src/content/clients.json` — currently empty; only add client names/logos that are cleared for public use.
+- `src/content/cases/*.json` — add more real case summaries as they're approved for publication (see CONTENT-GUIDE.md).
 
 ## Roadmap
 

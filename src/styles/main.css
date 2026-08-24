@@ -90,9 +90,11 @@ html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
     scroll-behavior: auto !important;
   }
 }
+:root[data-motion="reduce"] { scroll-behavior: auto; }
 :root[data-motion="reduce"] *, :root[data-motion="reduce"] *::before, :root[data-motion="reduce"] *::after {
   animation-duration: 0.001ms !important;
   transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
 }
 
 body {

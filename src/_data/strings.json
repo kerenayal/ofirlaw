@@ -59,7 +59,8 @@
       "subject": "נושא הפנייה",
       "message": "הודעה",
       "submit": "שליחת פנייה",
-      "required": "שדה חובה"
+      "required": "שדה חובה",
+      "defaultSubject": "פנייה מאתר האינטרנט"
     },
     "contactLabels": {
       "phone": "טלפון",
@@ -129,7 +130,8 @@
       "subject": "Subject",
       "message": "Message",
       "submit": "Send Inquiry",
-      "required": "Required field"
+      "required": "Required field",
+      "defaultSubject": "Inquiry from the website"
     },
     "contactLabels": {
       "phone": "Phone",

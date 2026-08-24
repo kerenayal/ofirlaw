@@ -147,11 +147,13 @@
       bodyLines.push("");
       bodyLines.push(message);
 
+      var defaultSubject = contactForm.getAttribute("data-default-subject") || "";
+
       var mailto =
         "mailto:" +
         encodeURIComponent(to) +
         "?subject=" +
-        encodeURIComponent(subject || "פנייה מאתר האינטרנט") +
+        encodeURIComponent(subject || defaultSubject) +
         "&body=" +
         encodeURIComponent(bodyLines.join("\n"));
 

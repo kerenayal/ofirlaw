@@ -29,12 +29,15 @@ module.exports = function (eleventyConfig) {
     return "/en" + urlPath;
   });
 
-  // Turn multi-paragraph content strings (separated by blank lines) into <p> tags
+  // Turn multi-paragraph content strings (separated by blank lines) into <p> tags.
+  // Content is plain text but a few entries (e.g. the labor-law practice area)
+  // intentionally embed real tags like <strong>, so only bare "&" not already
+  // part of an entity gets escaped — "<" and ">" are left alone.
   eleventyConfig.addFilter("paragraphs", (text) => {
     if (!text) return "";
     return text
       .split(/\n\s*\n/)
-      .map((p) => `<p>${p.trim()}</p>`)
+      .map((p) => `<p>${p.trim().replace(/&(?!(?:[a-z]+|#\d+|#x[0-9a-f]+);)/gi, "&amp;")}</p>`)
       .join("\n");
   });
 

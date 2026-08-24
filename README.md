@@ -53,7 +53,7 @@ The site is live at **https://ofirlaw.co**, connected via `src/CNAME`, `site.url
 ## Known placeholders to fill in before launch
 
 - `src/_data/site.json` — accessibility coordinator details still need to be filled in (name/phone/email/statement date/conformance level).
-- `src/assets/images/` — portrait photo is in place; still need a JPG/PNG Open Graph share image (1200×630) to replace `og-image-placeholder.svg`.
+- `src/assets/images/` — portrait photo and Open Graph share image (`og-image.jpg`, 1200×630) are both in place.
 - `src/content/cases/*.json` — add more real case summaries as they're approved for publication (see CONTENT-GUIDE.md).
 
 ## Roadmap

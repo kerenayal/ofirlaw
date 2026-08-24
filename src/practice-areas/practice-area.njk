@@ -9,8 +9,8 @@ pagination:
   addAllPagesToCollections: true
 permalink: "/practice-areas/{{ area.slug }}/"
 eleventyComputed:
-  title: "{{ area.title_he }} | אופיר עומר, עורכי דין"
-  description: "{{ area.short_he }}"
+  title: "{{ area.title_he | safe }} | אופיר עומר, עורכי דין"
+  description: "{{ area.short_he | safe }}"
   altHref: "/en/practice-areas/{{ area.slug }}/"
 ---
 <section class="page-header container">

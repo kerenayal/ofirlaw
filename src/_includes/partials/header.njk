@@ -5,7 +5,7 @@
   <div class="container site-header__inner">
     <a class="brand" href="{{ '/' | localize(lang) | url }}">{{ site.lawyerName_he if lang == 'he' else site.lawyerName_en }}</a>
 
-    <nav class="main-nav" aria-label="{{ s.nav.home }}">
+    <nav class="main-nav" aria-label="{{ s.nav.mainLabel }}">
       <ul class="main-nav__list">
         <li><a href="{{ '/about/' | localize(lang) | url }}" {% if navKey == 'about' %}aria-current="page"{% endif %}>{{ s.nav.about }}</a></li>
         <li class="has-dropdown">

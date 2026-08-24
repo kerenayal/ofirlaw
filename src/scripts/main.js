@@ -83,10 +83,11 @@
     });
   }
 
-  /* Theme toggle (light/dark) */
-  var themeToggle = document.querySelector("[data-theme-toggle]");
-  if (themeToggle) {
-    themeToggle.addEventListener("click", function () {
+  /* Theme toggle (light/dark) — may appear more than once (header + mobile
+     menu), so every instance gets wired up and kept in sync together. */
+  var themeToggles = document.querySelectorAll("[data-theme-toggle]");
+  themeToggles.forEach(function (toggle) {
+    toggle.addEventListener("click", function () {
       var root = document.documentElement;
       var current = root.getAttribute("data-theme");
       var next = current === "dark" ? "light" : "dark";
@@ -96,16 +97,17 @@
       } catch (e) {}
       updateThemeToggleLabel(next);
     });
-  }
+  });
   function updateThemeToggleLabel(theme) {
-    if (!themeToggle) return;
-    var toLight = themeToggle.getAttribute("data-label-to-light");
-    var toDark = themeToggle.getAttribute("data-label-to-dark");
-    var label = theme === "dark" ? toLight : toDark;
-    themeToggle.setAttribute("aria-label", label);
-    themeToggle.setAttribute("title", label);
+    themeToggles.forEach(function (toggle) {
+      var toLight = toggle.getAttribute("data-label-to-light");
+      var toDark = toggle.getAttribute("data-label-to-dark");
+      var label = theme === "dark" ? toLight : toDark;
+      toggle.setAttribute("aria-label", label);
+      toggle.setAttribute("title", label);
+    });
   }
-  if (themeToggle) {
+  if (themeToggles.length) {
     updateThemeToggleLabel(document.documentElement.getAttribute("data-theme") || "light");
   }
 

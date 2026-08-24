@@ -27,14 +27,14 @@
 
     <div class="header-controls">
       <a class="btn btn--primary" href="{{ '/contact/' | localize(lang) | url }}">{{ s.cta.headerButton }}</a>
-      <a class="lang-switch" href="{{ altHref | url }}" hreflang="{{ s.otherLangCode }}" lang="{{ s.otherLangCode }}" aria-label="{{ s.otherLangLabel }}">
+      <a class="lang-switch header-controls__mobile-hide" href="{{ altHref | url }}" hreflang="{{ s.otherLangCode }}" lang="{{ s.otherLangCode }}" aria-label="{{ s.otherLangLabel }}">
         {% if s.otherLangCode == 'en' %}
           {{ usaFlag() }}<span class="lang-switch__sep" aria-hidden="true">/</span>{{ ukFlag() }}
         {% else %}
           {{ israelFlag() }}
         {% endif %}
       </a>
-      <button type="button" class="icon-toggle" data-theme-toggle data-label-to-light="{{ s.theme.toggleToLight }}" data-label-to-dark="{{ s.theme.toggleToDark }}" aria-label="{{ s.theme.toggleToDark }}">
+      <button type="button" class="icon-toggle header-controls__mobile-hide" data-theme-toggle data-label-to-light="{{ s.theme.toggleToLight }}" data-label-to-dark="{{ s.theme.toggleToDark }}" aria-label="{{ s.theme.toggleToDark }}">
         <span class="icon-toggle__sun" aria-hidden="true">&#9788;</span>
         <span class="icon-toggle__moon" aria-hidden="true">&#9790;</span>
       </button>
@@ -51,6 +51,19 @@
     <button type="button" class="hamburger mobile-nav__close" aria-label="{{ s.mobileMenu.close }}">
       <span aria-hidden="true">&#10005;</span>
     </button>
+  </div>
+  <div class="mobile-nav__quick-controls">
+    <button type="button" class="icon-toggle" data-theme-toggle data-label-to-light="{{ s.theme.toggleToLight }}" data-label-to-dark="{{ s.theme.toggleToDark }}" aria-label="{{ s.theme.toggleToDark }}">
+      <span class="icon-toggle__sun" aria-hidden="true">&#9788;</span>
+      <span class="icon-toggle__moon" aria-hidden="true">&#9790;</span>
+    </button>
+    <a class="lang-switch" href="{{ altHref | url }}" hreflang="{{ s.otherLangCode }}" lang="{{ s.otherLangCode }}" aria-label="{{ s.otherLangLabel }}">
+      {% if s.otherLangCode == 'en' %}
+        {{ usaFlag() }}<span class="lang-switch__sep" aria-hidden="true">/</span>{{ ukFlag() }}
+      {% else %}
+        {{ israelFlag() }}
+      {% endif %}
+    </a>
   </div>
   <ul class="mobile-nav__list">
     <li><a href="{{ '/about/' | localize(lang) | url }}">{{ s.nav.about }}</a></li>

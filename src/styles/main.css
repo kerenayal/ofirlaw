@@ -7,7 +7,7 @@
 :root {
   /* Typography */
   --font-body: "Heebo", "Assistant", "Noto Sans Hebrew", -apple-system, "Segoe UI", sans-serif;
-  --font-heading: "Frank Ruhl Libre", "Heebo", Georgia, serif;
+  --font-heading: "Heebo", "Assistant", "Noto Sans Hebrew", -apple-system, "Segoe UI", sans-serif;
 
   /* Light theme (default) */
   --color-bg: #f7f5f0;
@@ -100,16 +100,23 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: calc(1rem * var(--font-scale));
-  line-height: 1.7;
+  font-size: calc(18px * var(--font-scale));
+  line-height: 1.75;
   transition: background var(--transition), color var(--transition);
 }
 
 img { max-width: 100%; display: block; }
-h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 500; line-height: 1.25; margin: 0 0 var(--space-2); }
-h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); }
-h2 { font-size: clamp(1.6rem, 2.6vw, 2.3rem); }
-h3 { font-size: 1.3rem; }
+h1, h2, h3, h4 { font-family: var(--font-heading); margin: 0 0 var(--space-2); }
+h1 { font-size: 56px; font-weight: 600; line-height: 1.3; }
+h2 { font-size: 40px; font-weight: 600; line-height: 1.35; }
+h3 { font-size: 26px; font-weight: 600; line-height: 1.4; }
+h4 { font-weight: 500; line-height: 1.25; }
+@media (max-width: 640px) {
+  body { font-size: calc(17px * var(--font-scale)); }
+  h1 { font-size: 38px; }
+  h2 { font-size: 30px; }
+  h3 { font-size: 23px; }
+}
 p { margin: 0 0 var(--space-2); color: var(--color-text-secondary); }
 
 a { color: inherit; text-decoration: none; }
@@ -180,7 +187,9 @@ textarea:focus-visible,
   border: 1px solid var(--color-gold-strong);
   border-radius: var(--radius);
   font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
   letter-spacing: 0.02em;
   cursor: pointer;
   background: transparent;
@@ -258,15 +267,22 @@ textarea:focus-visible,
 
 .brand {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.4;
   letter-spacing: 0.02em;
   white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .brand { font-size: 22px; }
 }
 
 .main-nav { display: flex; align-items: center; gap: var(--space-4); }
 .main-nav__list { list-style: none; display: flex; align-items: center; gap: var(--space-3); margin: 0; padding: 0; }
 .main-nav__list a {
-  font-size: 0.95rem;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
   padding-block: 0.3em;
   border-bottom: 1px solid transparent;
   transition: border-color var(--transition), color var(--transition);
@@ -403,6 +419,7 @@ textarea:focus-visible,
 
 @media (max-width: 900px) {
   .main-nav { display: none; }
+  .header-controls__mobile-hide { display: none; }
   .hamburger {
     display: inline-flex;
     background: none;
@@ -424,6 +441,7 @@ textarea:focus-visible,
   .mobile-nav.is-open { display: flex; }
   .mobile-nav__list { list-style: none; padding: 0; margin: var(--space-4) 0 0; display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.3rem; font-family: var(--font-heading); }
   .mobile-nav__top { display: flex; justify-content: space-between; align-items: center; }
+  .mobile-nav__quick-controls { display: flex; align-items: center; gap: var(--space-2); margin-top: var(--space-3); }
   .mobile-nav__list li.has-dropdown { display: flex; flex-direction: column; gap: var(--space-2); }
   .mobile-nav__item-row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
   .mobile-nav__item-row .dropdown-caret { padding: 0.5em; }
@@ -455,11 +473,15 @@ textarea:focus-visible,
    confirmed via viewport emulation down to 350px, matching real narrow
    Android devices with increased display-scale settings. Tighten spacing
    and cap the brand text with an ellipsis as a hard backstop so no
-   combination of font/content on any device can reintroduce the overflow. */
+   combination of font/content on any device can reintroduce the overflow.
+   Scoped to the sticky header specifically — it's the only spot competing
+   for horizontal space with the hamburger/flags/theme icons; the same
+   .brand class is reused (at full size, untruncated) in the footer and
+   the mobile-nav overlay, where there's no such squeeze. */
 @media (max-width: 420px) {
   .container { padding-inline: var(--space-2); }
   .header-controls { gap: var(--space-1); }
-  .brand {
+  .site-header .brand {
     font-size: 1rem;
     max-width: 40vw;
     overflow: hidden;
@@ -478,6 +500,10 @@ textarea:focus-visible,
   padding-block: var(--space-6);
 }
 .hero__content .eyebrow { margin-bottom: var(--space-3); }
+.hero__content > p { font-size: 23px; font-weight: 400; line-height: 1.55; }
+@media (max-width: 640px) {
+  .hero__content > p { font-size: 19px; }
+}
 .hero__actions { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: var(--space-4); }
 .hero__portrait {
   border: 1px solid var(--color-border);
@@ -509,7 +535,10 @@ textarea:focus-visible,
   gap: var(--space-1);
 }
 .card:hover { border-color: var(--color-gold); }
-.card__title { font-family: var(--font-heading); font-size: 1.25rem; margin: 0; }
+.card__title { font-family: var(--font-heading); font-size: 21px; font-weight: 600; line-height: 1.3; margin: 0; }
+@media (max-width: 640px) {
+  .card__title { font-size: 19px; }
+}
 .card__link {
   margin-top: auto;
   font-size: 0.9rem;
@@ -635,6 +664,11 @@ textarea:focus-visible,
   border-top: 1px solid var(--color-border);
   padding-block: var(--space-5);
   margin-top: var(--space-6);
+  font-size: 15px;
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .site-footer { font-size: 14px; }
 }
 .site-footer__grid {
   display: grid;

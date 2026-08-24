@@ -379,6 +379,7 @@ textarea:focus-visible,
   transition: border-color var(--transition);
 }
 .icon-toggle:hover { border-color: var(--color-gold); }
+.icon-toggle__glyph { width: 1.15rem; height: 1.15rem; flex-shrink: 0; }
 
 /* Icon shows the theme you'll SWITCH TO (matches the button's aria-label),
    not the current theme: moon = "go dark" (shown in light mode),

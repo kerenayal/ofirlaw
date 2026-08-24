@@ -63,6 +63,23 @@
     if (e.key === "Escape") closeAllDropdowns();
   });
 
+  /* CSS opens the dropdown on :focus-within alone (for keyboard users
+     tabbing through), independent of the click/is-open state above —
+     keep aria-expanded in sync with that so it never reports "collapsed"
+     while the menu is visibly open. */
+  document.querySelectorAll(".has-dropdown").forEach(function (li) {
+    var toggle = li.querySelector("[data-dropdown-toggle]");
+    if (!toggle) return;
+    li.addEventListener("focusin", function () {
+      toggle.setAttribute("aria-expanded", "true");
+    });
+    li.addEventListener("focusout", function (e) {
+      if (!li.contains(e.relatedTarget) && !li.classList.contains("is-open")) {
+        toggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+
   /* Case category filters */
   var filterBar = document.querySelector("[data-case-filters]");
   var caseGrid = document.querySelector("[data-case-grid]");

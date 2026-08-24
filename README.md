@@ -27,21 +27,28 @@ npm run build    # production build to _site/
 2. In the repo's **Settings → Pages**, set the source to **GitHub Actions** (the included workflow at `.github/workflows/deploy.yml` builds and deploys automatically on every push to `main`).
 3. Once the first deploy succeeds, the site is live at `https://<your-username>.github.io/<repo-name>/` — but see the custom domain steps below to serve it from your own domain instead.
 
-## Connecting the GoDaddy domain
+## Custom domain
 
-1. Update `src/CNAME` with your real domain (currently a placeholder: `example-domain-placeholder.co.il`) — this file is copied to the build output automatically so the setting survives every deploy.
+The site is live at **https://ofirlaw.co**, connected via `src/CNAME`, `site.url` in `src/_data/site.json`, and the `Sitemap:` line in `src/robots.txt`. GitHub Pages' custom domain field (repo **Settings → Pages**) is set to `ofirlaw.co`, with "Enforce HTTPS" enabled.
+
+<details>
+<summary>Reference: how this was set up (e.g. if the domain ever needs to change)</summary>
+
+1. Update `src/CNAME` with the new domain — this file is copied to the build output automatically so the setting survives every deploy.
 2. Also update `site.url` in `src/_data/site.json` and the `Sitemap:` line in `src/robots.txt` to match — these drive canonical URLs, hreflang tags, and the sitemap.
-3. In **GoDaddy → DNS Management** for your domain, add:
-   - For the apex domain (`example.co.il`): four `A` records pointing to GitHub Pages' IPs:
+3. In **GoDaddy → DNS Management** for the domain, add:
+   - For the apex domain: four `A` records pointing to GitHub Pages' IPs:
      ```
      185.199.108.153
      185.199.109.153
      185.199.110.153
      185.199.111.153
      ```
-   - For `www.example.co.il` (optional): a `CNAME` record pointing to `<your-username>.github.io`.
-4. Back in **GitHub → Settings → Pages**, enter your custom domain in the "Custom domain" field and save (this also writes the CNAME file remotely — keeping it in `src/CNAME` too ensures it isn't lost on a fresh deploy).
+   - For the `www` subdomain (optional): a `CNAME` record pointing to `kerenayal.github.io`.
+4. Back in **GitHub → Settings → Pages**, enter the custom domain in the "Custom domain" field and save (this also writes the CNAME file remotely — keeping it in `src/CNAME` too ensures it isn't lost on a fresh deploy).
 5. Wait for DNS to propagate (can take minutes to a few hours), then check **"Enforce HTTPS"** in the same Pages settings once GitHub shows the certificate as issued.
+
+</details>
 
 ## Known placeholders to fill in before launch
 

@@ -610,7 +610,7 @@ textarea:focus-visible,
   transition: filter var(--transition), opacity var(--transition);
 }
 .clients-list__item:hover img,
-.clients-list__item img:focus-visible {
+.clients-list__item a:focus-visible img {
   filter: grayscale(0);
   opacity: 1;
 }

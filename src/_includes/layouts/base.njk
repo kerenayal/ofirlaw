@@ -19,6 +19,9 @@
   <meta property="og:image" content="{{ site.url }}{{ site.ogImage | url }}">
   <meta property="og:locale" content="{{ 'he_IL' if lang == 'he' else 'en_US' }}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ site.ogImage | url }}">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +47,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Attorney",
-    "name": "{{ site.lawyerName_en }}",
+    "name": "{{ (site.lawyerName_he if lang == 'he' else site.lawyerName_en) | safe }}",
     "url": "{{ site.url }}",
     "image": "{{ site.url }}{{ site.portraitLarge | url }}",
     "telephone": "{{ site.phoneHref }}",
@@ -52,8 +55,8 @@
     "email": "{{ site.email }}",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Jabotinsky St. 7, Moshe Aviv Tower, Floor 34",
-      "addressLocality": "Ramat Gan",
+      "streetAddress": "{{ (site.streetAddress_he if lang == 'he' else site.streetAddress_en) | safe }}",
+      "addressLocality": "{{ (site.addressLocality_he if lang == 'he' else site.addressLocality_en) | safe }}",
       "addressCountry": "IL"
     },
     "areaServed": "IL",

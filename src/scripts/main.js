@@ -147,6 +147,25 @@
   /* Contact form -> mailto (no backend configured yet) */
   var contactForm = document.querySelector("[data-contact-form]");
   if (contactForm) {
+    /* Neither phone nor email is individually required, but at least one
+       of the two must be filled in — HTML has no native way to express
+       that, so it's enforced via setCustomValidity, which plugs into the
+       browser's normal validation flow (same bubble UI as "required"). */
+    var phoneInput = contactForm.querySelector("#phone");
+    var emailInput = contactForm.querySelector("#email");
+    function validateContactMethod() {
+      if (!phoneInput || !emailInput) return;
+      var hasContactMethod = phoneInput.value.trim() !== "" || emailInput.value.trim() !== "";
+      phoneInput.setCustomValidity(
+        hasContactMethod ? "" : contactForm.getAttribute("data-error-contact-method") || ""
+      );
+    }
+    if (phoneInput && emailInput) {
+      phoneInput.addEventListener("input", validateContactMethod);
+      emailInput.addEventListener("input", validateContactMethod);
+      validateContactMethod();
+    }
+
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
       var data = new FormData(contactForm);

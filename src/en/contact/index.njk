@@ -22,6 +22,7 @@ description: "A complex legal matter first requires a precise understanding of t
       data-label-phone="{{ strings.en.form.phone }}"
       data-label-email="{{ strings.en.form.email }}"
       data-default-subject="{{ strings.en.form.defaultSubject }}"
+      data-error-contact-method="{{ strings.en.form.contactMethodRequired }}"
     >
       <div class="form-grid">
         <div class="field">
@@ -30,11 +31,11 @@ description: "A complex legal matter first requires a precise understanding of t
         </div>
         <div class="field">
           <label for="phone">{{ strings.en.form.phone }}</label>
-          <input type="tel" id="phone" name="phone" required>
+          <input type="tel" id="phone" name="phone">
         </div>
         <div class="field full">
           <label for="email">{{ strings.en.form.email }}</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email">
         </div>
         <div class="field full">
           <label for="subject">{{ strings.en.form.subject }}</label>
@@ -42,7 +43,7 @@ description: "A complex legal matter first requires a precise understanding of t
         </div>
         <div class="field full">
           <label for="message">{{ strings.en.form.message }}</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
+          <textarea id="message" name="message" rows="6" minlength="3" required></textarea>
         </div>
       </div>
       <button type="submit" class="btn btn--primary" style="margin-top: 1.5rem;">{{ strings.en.form.submit }}</button>

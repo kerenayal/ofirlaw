@@ -61,7 +61,8 @@
       "message": "הודעה",
       "submit": "שליחת פנייה",
       "required": "שדה חובה",
-      "defaultSubject": "פנייה מאתר האינטרנט"
+      "defaultSubject": "פנייה מאתר האינטרנט",
+      "contactMethodRequired": "יש להזין מספר טלפון או כתובת דוא\"ל (לפחות אחד מהשניים)"
     },
     "contactLabels": {
       "phone": "טלפון",
@@ -133,7 +134,8 @@
       "message": "Message",
       "submit": "Send Inquiry",
       "required": "Required field",
-      "defaultSubject": "Inquiry from the website"
+      "defaultSubject": "Inquiry from the website",
+      "contactMethodRequired": "Please provide a phone number or email address (at least one of the two)"
     },
     "contactLabels": {
       "phone": "Phone",

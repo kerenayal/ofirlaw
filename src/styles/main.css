@@ -418,7 +418,6 @@ textarea:focus-visible,
 
 .hamburger { display: none; }
 .mobile-nav { display: none; }
-.mobile-nav.is-open { display: flex; }
 
 @media (max-width: 900px) {
   .main-nav { display: none; }

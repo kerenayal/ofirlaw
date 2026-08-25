@@ -15,17 +15,25 @@
   var hamburger = document.querySelector(".hamburger");
   var mobileNav = document.querySelector(".mobile-nav");
   var mobileNavClose = document.querySelector(".mobile-nav__close");
+  function getFocusableElements(container) {
+    return Array.prototype.slice.call(
+      container.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    );
+  }
   function openMobileNav() {
     if (!mobileNav) return;
     mobileNav.classList.add("is-open");
     hamburger.setAttribute("aria-expanded", "true");
     document.body.style.overflow = "hidden";
+    var focusable = getFocusableElements(mobileNav);
+    if (focusable.length) focusable[0].focus();
   }
   function closeMobileNav() {
-    if (!mobileNav) return;
+    if (!mobileNav || !mobileNav.classList.contains("is-open")) return;
     mobileNav.classList.remove("is-open");
     hamburger.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
+    hamburger.focus();
   }
   if (hamburger && mobileNav) {
     hamburger.addEventListener("click", openMobileNav);
@@ -33,6 +41,41 @@
     mobileNav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", closeMobileNav);
     });
+
+    /* Escape closes the menu; Tab is trapped inside it while open */
+    document.addEventListener("keydown", function (e) {
+      if (!mobileNav.classList.contains("is-open")) return;
+      if (e.key === "Escape") {
+        closeMobileNav();
+        return;
+      }
+      if (e.key === "Tab") {
+        var focusable = getFocusableElements(mobileNav);
+        if (!focusable.length) return;
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+
+    /* If the window is resized past the mobile breakpoint while the menu
+       is open, close it so its state (aria-expanded, locked body scroll)
+       doesn't desync from the CSS layout it depends on. */
+    var desktopBreakpoint = window.matchMedia("(min-width: 901px)");
+    var handleBreakpointChange = function (e) {
+      if (e.matches) closeMobileNav();
+    };
+    if (desktopBreakpoint.addEventListener) {
+      desktopBreakpoint.addEventListener("change", handleBreakpointChange);
+    } else if (desktopBreakpoint.addListener) {
+      desktopBreakpoint.addListener(handleBreakpointChange);
+    }
   }
 
   /* Practice-areas dropdown (desktop hover/focus already handled by CSS;

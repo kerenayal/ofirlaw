@@ -28,15 +28,15 @@ description: "הצהרת הנגישות של אתר האינטרנט של אופ
   </ul>
 
   <h2>מגבלות ידועות</h2>
-  <p>[להשלמה]</p>
+  <p>בעת כתיבת הצהרה זו, אנו מודעים למגבלות הבאות, אותן אנו פועלים לתקן: כלי הגדלת הטקסט בתפריט הנגישות עדיין לא משפיע על כותרות, תפריט הניווט וכפתורים מסוימים; ניווט המקלדת בתפריט הנייד אינו "נעול" (trapped) באופן מלא בתוך התפריט הפתוח; ותפריט אפשרויות הנגישות עדיין לא מיישם באופן מלא את התנהגות המקלדת המצופה מתפריט מוקפץ (דיאלוג).</p>
 
   <h2>פנייה בנושא נגישות</h2>
   <p>נתקלתם בבעיית נגישות באתר? נשמח לשמוע ולטפל בפנייתכם.</p>
   <p>
-    רכז/ת נגישות: {{ site.accessibility.coordinatorName }}<br>
-    טלפון: {{ site.accessibility.coordinatorPhone }}<br>
-    דוא"ל: {{ site.accessibility.coordinatorEmail }}
+    רכז/ת נגישות: {{ site.accessibility.coordinatorName_he }}<br>
+    טלפון: <a href="tel:{{ site.accessibility.coordinatorPhoneHref }}"><bdi dir="ltr">{{ site.accessibility.coordinatorPhone }}</bdi></a><br>
+    דוא"ל: <a href="mailto:{{ site.accessibility.coordinatorEmail }}">{{ site.accessibility.coordinatorEmail }}</a>
   </p>
 
-  <p>תאריך עדכון הצהרה זו: {{ site.accessibility.statementDate }}</p>
+  <p>תאריך עדכון הצהרה זו: {{ site.accessibility.statementDate_he }}</p>
 </section>

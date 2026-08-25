@@ -28,15 +28,15 @@ description: "The accessibility statement for the Ofir Omer, Adv. website."
   </ul>
 
   <h2>Known Limitations</h2>
-  <p>[TO COMPLETE]</p>
+  <p>As of this statement, we are aware of the following limitations, which we are working to address: the text-size control in the accessibility menu does not yet affect headings, the navigation menu, or certain buttons; keyboard navigation within the mobile menu is not yet fully trapped inside the open menu; and the accessibility options panel does not yet fully implement the keyboard behavior expected of a pop-up dialog.</p>
 
   <h2>Accessibility Contact</h2>
   <p>Encountered an accessibility issue on this site? We would like to hear from you and address it.</p>
   <p>
-    Accessibility Coordinator: {{ site.accessibility.coordinatorName }}<br>
-    Phone: {{ site.accessibility.coordinatorPhone }}<br>
-    Email: {{ site.accessibility.coordinatorEmail }}
+    Accessibility Coordinator: {{ site.accessibility.coordinatorName_en }}<br>
+    Phone: <a href="tel:{{ site.accessibility.coordinatorPhoneHref }}">{{ site.accessibility.coordinatorPhone }}</a><br>
+    Email: <a href="mailto:{{ site.accessibility.coordinatorEmail }}">{{ site.accessibility.coordinatorEmail }}</a>
   </p>
 
-  <p>Last updated: {{ site.accessibility.statementDate }}</p>
+  <p>Last updated: {{ site.accessibility.statementDate_en }}</p>
 </section>

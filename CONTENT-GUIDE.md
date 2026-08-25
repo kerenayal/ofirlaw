@@ -84,7 +84,7 @@
 
 ## הצהרת נגישות
 
-קובץ: `src/_data/site.json`, מפתח `accessibility` — יש להשלים את פרטי רכז/ת הנגישות, תאריך עדכון ההצהרה, ורמת התאימות בפועל (מומלץ לבצע בדיקת נגישות מקצועית לפני קביעת הרמה הסופית).
+קובץ: `src/_data/site.json`, מפתח `accessibility` — כאן מוגדרים פרטי רכז/ת הנגישות (`coordinatorName_he`/`coordinatorName_en`, `coordinatorPhone`, `coordinatorEmail`), תאריך עדכון ההצהרה (`statementDate_he`/`statementDate_en`), ורמת התאימות בפועל (`conformanceLevel_he`/`conformanceLevel_en`). רשימת "מגבלות ידועות" בעמוד עצמו (`src/accessibility/index.njk` ו-`src/en/accessibility/index.njk`) כתובה ישירות בקוד ה-HTML של העמוד, לא בקובץ הנתונים — יש לעדכן אותה בכל פעם שמגבלה נגישות אמיתית מתוקנת או מתגלה. **מומלץ לבצע בדיקת נגישות מקצועית חד-פעמית** מול בודק חיצוני מוסמך לפני שינוי רמת התאימות המוצהרת מ"חלקית" ל"מלאה".
 
 ---
 

@@ -17,12 +17,15 @@
   "portraitLarge": "/assets/images/OfirLawMain.jpeg",
   "portraitSmall": "/assets/images/portrait-placeholder-small.svg",
   "accessibility": {
-    "coordinatorName": "[להשלמה]",
-    "coordinatorEmail": "[להשלמה]",
-    "coordinatorPhone": "[להשלמה]",
-    "statementDate": "[להשלמה]",
-    "conformanceLevel_he": "עמידה חלקית/מלאה בתקן הישראלי ת\"י 5568 (WCAG 2.0 AA) — [להשלמה]",
-    "conformanceLevel_en": "Partial/full conformance with Israeli Standard 5568 (WCAG 2.0 AA) — [TO COMPLETE]"
+    "coordinatorName_he": "אופיר עומר, עורכי דין",
+    "coordinatorName_en": "Ofir Omer, Adv.",
+    "coordinatorEmail": "ofiromer.adv@gmail.com",
+    "coordinatorPhone": "054-7822357",
+    "coordinatorPhoneHref": "+972547822357",
+    "statementDate_he": "25 באוגוסט 2026",
+    "statementDate_en": "August 25, 2026",
+    "conformanceLevel_he": "עמידה חלקית בתקן הישראלי ת\"י 5568 (WCAG 2.0 AA). האתר תוכנן ונבנה בהתאם לדרישות הנגישות המקובלות, אך טרם עבר בדיקת נגישות מקצועית מלאה על ידי בודק חיצוני מוסמך.",
+    "conformanceLevel_en": "Partial conformance with Israeli Standard 5568 (WCAG 2.0 AA). The site was designed and built with accessibility requirements in mind, but has not yet undergone a full professional accessibility audit by a certified external auditor."
   },
   "privacy": {
     "lastUpdated": "[להשלמה]"

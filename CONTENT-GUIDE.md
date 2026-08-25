@@ -90,6 +90,6 @@
 
 ## מדיניות פרטיות
 
-קבצים: `src/privacy-policy/index.njk` (עברית) ו-`src/en/privacy-policy/index.njk` (אנגלית), ותאריך העדכון ב-`src/_data/site.json` (מפתח `privacy.lastUpdated`).
+קבצים: `src/privacy-policy/index.njk` (עברית) ו-`src/en/privacy-policy/index.njk` (אנגלית), ותאריך העדכון ב-`src/_data/site.json` (מפתחות `privacy.lastUpdated_he` ו-`privacy.lastUpdated_en` — יש לעדכן את שניהם, כל אחד בפורמט התאריך המקובל בשפתו).
 
 הטקסט הנוכחי מתאר במדויק את המצב הטכני של האתר כפי שנבנה (טופס יצירת קשר הפועל כרגע כ-mailto בלבד, ללא שימוש בכלי ניתוח נתונים או עוגיות, אחסון ב-GitHub Pages, שימוש ב-Google Fonts). **חשוב לעדכן עמוד זה בכל פעם שמתווסף שירות חדש** (למשל שירות שליחת מיילים כמו Resend/Formspree, כלי אנליטיקס, או פיקסל פרסומי), וכן מומלץ שעו"ד אופיר עומר יאשר את הנוסח הסופי לפני פרסום, מאחר שמדובר במסמך בעל משמעות משפטית.

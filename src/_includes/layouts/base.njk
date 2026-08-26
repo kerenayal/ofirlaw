@@ -6,6 +6,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/images/favicon-512.png' | url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | url }}">
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
   <link rel="canonical" href="{{ site.url }}{{ pageUrl }}">
@@ -32,8 +35,8 @@
   <script>
     (function () {
       try {
-        var theme = localStorage.getItem("ofirlaw-theme");
-        if (theme) document.documentElement.setAttribute("data-theme", theme);
+        var theme = localStorage.getItem("ofirlaw-theme") || "dark";
+        document.documentElement.setAttribute("data-theme", theme);
         var a11y = JSON.parse(localStorage.getItem("ofirlaw-a11y") || "{}");
         if (a11y.fontScale) document.documentElement.style.setProperty("--font-scale", a11y.fontScale);
         if (a11y.contrast) document.documentElement.setAttribute("data-contrast", "high");
